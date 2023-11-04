@@ -21,7 +21,13 @@ alias stopclamd="systemctl stop clamav-daemon.service"
 # config file located ~/freshclam.conf
 alias freshclamscan="clamdscan --fdpass /"
 
-# usage `findfile ~/code index.hml`
+# usage `findfile index.hml ~/code`
 findfile() {
-  find $1 -name "*$2*"
+  find $2 -name "*$1*"
 }
+alias findfiles=findfile
+
+# save all current config settings to `~/code/setup/saved_settings.dconf`
+alias backup_settings="dconf dump / > ~/code/setup/saved_settings.dconf"
+# load saved settings from `~/code/setup/saved_settings.dconf`
+alias load_settings="dconf load -f / < ~/code/setup/saved_settings.dconf"
