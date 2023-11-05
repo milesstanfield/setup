@@ -1,5 +1,5 @@
 #!/bin/sh
 
-function ave() {
+ave() {
   aws-vault exec --duration=12h -- $@
 }

@@ -3,12 +3,11 @@
 alias dcprune="docker system prune"
 alias dcpruneall="docker system prune -a"
 
-dcstart_fun() {
+dcstart() {
+  warn "usage: dcstart postgres-shared"
   docker compose --file ~/code/setup/docker/docker-compose.yml up $1 --detach
 }
-alias dcstart=dcstart_fun # dcstart postgres-shared
 
-dc_fun() {
+dc() {
   docker compose --file ~/code/setup/docker/docker-compose.yml $@
 }
-alias dc=dc_fun

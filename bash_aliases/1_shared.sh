@@ -1,11 +1,6 @@
 #!/bin/sh
 
-# SUDO ----------------------------------------------------
-# whenever we use sudo in an alias it creates a .sudo_as_admin_successful file. get rid of it!
-alias remove_sudo_as_admin="rm ~/.sudo_as_admin_successful"
-
 # COLORS ----------------------------------------------------
-
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;93m'
@@ -19,10 +14,22 @@ warn() {
   echo -e "${YELLOW}$1${NOCOLOR}"
 }
 
+print_warn() {
+  printf "${YELLOW}$1${NOCOLOR}"
+}
+
 error() {
   echo -e "${RED}$1${NOCOLOR}"
 }
 
+print_error() {
+  printf "${RED}$1${NOCOLOR}"
+}
+
 success() {
   echo -e "${BLUE}$1${NOCOLOR}"
+}
+
+print_success() {
+  printf "${BLUE}$1${NOCOLOR}"
 }

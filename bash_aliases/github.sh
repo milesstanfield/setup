@@ -8,29 +8,29 @@ log_fun() {
   git log -$1 --pretty=oneline --abbrev-commit
 }
 
-backup_fun() {
+backup() {
   currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   b="-backup"
   git checkout -b "$currentbranch$b"
   git checkout $currentbranch
 }
 
-push_fun() {
+push() {
   currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   git push origin "$currentbranch"
 }
 
-pushf_fun() {
+pushf() {
   currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   git push -f origin "$currentbranch"
 }
 
-pullRebase_fun() {
+prb() {
   currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   git pull --rebase origin "$currentbranch"
 }
 
-amend_fun() {
+amend() {
   git commit --amend -m "$1"
 }
 
@@ -45,10 +45,4 @@ alias clean="git checkout . ; git clean -d -f"
 alias aac="git add . && git commit -m 'automated commit message'"
 alias stash="git stash save -u"
 alias gitignore="git rm -r --cached . && git add ."
-alias rebase=rebase_fun
-alias l=log_fun
-alias backup=backup_fun
-alias push=push_fun
-alias pushf=pushf_fun
-alias prb=pullRebase_fun
-alias amend=amend_fun
+alias l=log_fun # because `l` is already a defined alias in `0_linux.sh` (from linux)
