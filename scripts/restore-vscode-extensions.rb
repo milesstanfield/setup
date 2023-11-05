@@ -1,5 +1,7 @@
 #!/bin/ruby
 
+# usage: ruby ~/code/setup/scripts/restore-vscode-extensions.rb
+
 require "open3"
 require "/home/milesstanfield/code/setup/services/color.rb"
 
