@@ -15,5 +15,10 @@
   "explorer.confirmDelete": false,
   "workbench.editor.enablePreview": false,
   "window.menuBarVisibility": "hidden",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "workbench.colorCustomizations": {
+    "statusBar.background" : "#141313",
+    "statusBar.noFolderBackground" : "#141313",
+    "statusBar.debuggingBackground": "#141313"
+  }
 }
