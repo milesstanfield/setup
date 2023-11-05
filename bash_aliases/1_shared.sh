@@ -33,3 +33,13 @@ success() {
 print_success() {
   printf "${BLUE}$1${NOCOLOR}"
 }
+
+
+# COMMANDS ----------------------------------------------------
+cmd_exists () {
+  # usage: `if cmd_exists mycommand; then`
+  if ! type "$1" &> /dev/null; then
+    error "command: $1 doesnt exist"
+    return 1
+  fi;
+}
