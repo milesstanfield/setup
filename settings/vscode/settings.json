@@ -1,0 +1,19 @@
+{
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Default Dark+",
+  "extensions.ignoreRecommendations": true,
+  "window.title": "${rootName}${separator}${activeFolderMedium}",
+  "files.trimTrailingWhitespace": true,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "files.insertFinalNewline": true,
+  "explorer.confirmDelete": false,
+  "workbench.editor.enablePreview": false,
+  "window.menuBarVisibility": "toggle",
+  "workbench.startupEditor": "none"
+}
