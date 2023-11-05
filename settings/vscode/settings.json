@@ -14,6 +14,6 @@
   "files.insertFinalNewline": true,
   "explorer.confirmDelete": false,
   "workbench.editor.enablePreview": false,
-  "window.menuBarVisibility": "toggle",
+  "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none"
 }

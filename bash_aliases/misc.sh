@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# BIOS ------------------------------------------------------------
+alias bootbios="sudo systemctl reboot --firmware-setup"
+
 # KEY TRACKING ------------------------------------------------------------
 # interactive mechanism to track which keys the system recognizes was pressed.
 # useful if using different types of keyboards to see what the system thinks the keys are

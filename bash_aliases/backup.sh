@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # DCONF ----------------------------------------------------
-# save all current config settings to `~/code/setup/settings/local.dconf`
+# save all current system dconf settings
 alias backup_settings="dconf dump / > ~/code/setup/settings/local.dconf"
 
 # VSCODE ----------------------------------------------------
