@@ -80,12 +80,11 @@ restore_vscode() {
 
 # apt-mark showmanual
 
-(zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
-  egrep '^(Start-Date:|Commandline:)' |
-  grep -v aptdaemon |
-  egrep '^Commandline:'
+# (zcat $(ls -tr /var/log/apt/history.log*.gz); cat /var/log/apt/history.log) 2>/dev/null |
+#   egrep '^(Start-Date:|Commandline:)' |
+#   grep -v aptdaemon |
+#   egrep '^Commandline:'
 
 # flatpak list
 
 # snap list
-
