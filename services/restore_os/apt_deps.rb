@@ -1,5 +1,3 @@
-require "/home/milesstanfield/code/setup/services/restore_os/base.rb"
-
 module RestoreOS
   class AptDeps < ::RestoreOS::Base
     def install!

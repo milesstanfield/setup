@@ -1,4 +1,7 @@
-Dir["/home/milesstanfield/code/setup/services/backup_os/*.rb"].each {|file| require file }
+require "/home/milesstanfield/code/setup/services/backup_os/base.rb"
+Dir["/home/milesstanfield/code/setup/services/backup_os/*.rb"].each do |file|
+  require file unless file.match?(/backup_os\/base\.rb/)
+end
 
 module BackupOS
   def backup_settings!
