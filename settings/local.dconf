@@ -1,14 +1,21 @@
+[ca/desrt/dconf-editor]
+saved-pathbar-path='/org/gnome/terminal/legacy/keybindings/'
+saved-view='/org/gnome/terminal/legacy/'
+window-height=500
+window-is-maximized=false
+window-width=540
+
 [com/github/donadigo/eddy]
 mime-types=['application/vnd.debian.binary-package', 'application/x-deb']
-window-x=50
-window-y=82
+window-x=476
+window-y=177
 
 [desktop/ibus/panel/emoji]
 hotkey=@as []
 
 [io/elementary/appcenter/settings]
-cached-drivers=['nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)']
-last-refresh-time=int64 1698714487
+cached-drivers=['nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)', 'nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)']
+last-refresh-time=int64 1699277270
 window-maximized=false
 window-size=(1720, 1336)
 
@@ -17,7 +24,7 @@ window-size=(960, 600)
 window-state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='color'
 
 [org/gnome/desktop/a11y/magnifier]
 mag-factor=9.0
@@ -57,7 +64,7 @@ show-battery-percentage=true
 autorun-never=false
 
 [org/gnome/desktop/notifications]
-application-children=['gnome-control-center', 'io-elementary-appcenter', 'org-gnome-software', 'org-gnome-terminal', 'firefox', 'gnome-power-panel', 'org-gnome-tweaks', 'com-discordapp-discord', 'org-signal-signal', 'com-vixalien-sticky', 'org-gnome-nautilus', 'org-gimp-gimp', 'org-gnome-eog']
+application-children=['gnome-control-center', 'io-elementary-appcenter', 'org-gnome-software', 'org-gnome-terminal', 'firefox', 'gnome-power-panel', 'org-gnome-tweaks', 'com-discordapp-discord', 'org-signal-signal', 'com-vixalien-sticky', 'org-gnome-nautilus', 'org-gimp-gimp', 'org-gnome-eog', 'flatpak-installer']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/com-discordapp-discord]
@@ -68,6 +75,9 @@ application-id='com.vixalien.sticky.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/flatpak-installer]
+application-id='flatpak-installer.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
@@ -163,7 +173,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince/default]
-window-ratio=(2.7908496732026142, 0.79797979797979801)
+window-ratio=(2.8104575163398691, 1.6868686868686869)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -204,7 +214,7 @@ search-view='list-view'
 show-image-thumbnails='local-only'
 
 [org/gnome/nautilus/window-state]
-initial-size=(1708, 632)
+initial-size=(1571, 949)
 maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -230,7 +240,7 @@ sleep-inactive-battery-type='suspend'
 
 [org/gnome/shell]
 command-history=['echo miles', 'xkill']
-favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', '1password_1password.desktop', 'io.elementary.appcenter.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
+favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', '1password_1password.desktop', 'io.elementary.appcenter.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
 had-bluetooth-devices-setup=false
 welcome-dialog-last-shown-version='42.5'
 
@@ -298,10 +308,10 @@ toggle-message-tray=@as []
 toggle-overview=['<Alt>Down']
 
 [org/gnome/software]
-check-timestamp=int64 1699092415
+check-timestamp=int64 1699277189
 first-run=false
 install-timestamp=int64 1698570695
-update-notification-timestamp=int64 1698599365
+update-notification-timestamp=int64 1699185089
 
 [org/gnome/system/location]
 enabled=false
@@ -373,5 +383,5 @@ sort-column='modified'
 sort-directories-first=true
 sort-order='descending'
 type-format='category'
-window-position=(1168, 265)
+window-position=(1412, 221)
 window-size=(1104, 822)

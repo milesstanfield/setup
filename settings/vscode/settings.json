@@ -20,5 +20,6 @@
     "statusBar.background" : "#141313",
     "statusBar.noFolderBackground" : "#141313",
     "statusBar.debuggingBackground": "#141313"
-  }
+  },
+  "files.trimFinalNewlines": true
 }

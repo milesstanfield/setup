@@ -2,7 +2,8 @@
 
 # DCONF ----------------------------------------------------
 # save all current system dconf settings
-alias backup_settings="dconf dump / > ~/code/setup/settings/local.dconf"
+alias backup_dconf="dconf dump / > ~/code/setup/settings/local.dconf"
+# alias backup_terminal_settings="dconf dump /org/gnome/terminal/ > ~/code/setup/settings/dconf/terminal.dconf"
 
 # VSCODE ----------------------------------------------------
 backup_vscode() {
