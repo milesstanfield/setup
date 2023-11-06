@@ -1,7 +1,7 @@
 # ALIASES -------------------------------------------------------------
-# source all alias .sh files from ~/code/bash_aliases
-if [ -d ~/code/setup/bash_aliases ]; then
-  for filename in ~/code/setup/bash_aliases/*.sh; do
+# source all alias .sh files from ~/code/aliases
+if [ -d ~/code/setup/aliases ]; then
+  for filename in ~/code/setup/aliases/*.sh; do
     [ -e "$filename" ] || continue
     source $filename
   done
