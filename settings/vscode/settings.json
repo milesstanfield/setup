@@ -1,6 +1,5 @@
 {
   "workbench.sideBar.location": "right",
-  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Dark+",
   "extensions.ignoreRecommendations": true,
   "window.title": "${rootName}${separator}${activeFolderMedium}",
@@ -21,5 +20,6 @@
     "statusBar.noFolderBackground" : "#141313",
     "statusBar.debuggingBackground": "#141313"
   },
-  "files.trimFinalNewlines": true
+  "files.trimFinalNewlines": true,
+  "workbench.activityBar.location": "hidden"
 }
