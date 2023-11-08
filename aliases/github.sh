@@ -1,42 +1,50 @@
 #!/bin/sh
 
-rebase() {
+rebase_func() {
   git rebase -i HEAD~$1
 }
+alias rebase=rebase_func
 
-log_fun() {
+log_func() {
   git log -$1 --pretty=oneline --abbrev-commit
 }
+alias l=log_func
 
-backup() {
-  currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+backup_branch_func() {
+  current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   b="-backup"
-  git checkout -b "$currentbranch$b"
-  git checkout $currentbranch
+  git checkout -b "$current_branch$b"
+  git checkout $current_branch
 }
+alias backup=backup_branch_func
 
-push() {
-  currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
-  git push origin "$currentbranch"
+push_branch_func() {
+  current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+  git push origin "$current_branch"
 }
+alias push=push_branch_func
 
-pushf() {
-  currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
-  git push -f origin "$currentbranch"
+force_push_branch_func() {
+  current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+  git push -f origin "$current_branch"
 }
+alias pushf=force_push_branch_func
 
-prb() {
-  currentbranch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
-  git pull --rebase origin "$currentbranch"
+pull_rebase_func() {
+  current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+  git pull --rebase origin "$current_branch"
 }
+alias prb=pull_rebase_func
 
-amend() {
+amend_last_commit_message_func() {
   git commit --amend -m "$1"
 }
+alias amend=amend_last_commit_message_func
 
-new() {
+new_branch_func() {
   git checkout -b "$1"
 }
+alias new=new_branch_func
 
 alias diff="git diff"
 alias s="git status"
@@ -45,4 +53,3 @@ alias clean="git checkout . ; git clean -d -f"
 alias aac="git add . && git commit -m 'automated commit message'"
 alias stash="git stash save -u"
 alias gitignore="git rm -r --cached . && git add ."
-alias l=log_fun # because `l` is already a defined alias in `0_linux.sh` (from linux)
