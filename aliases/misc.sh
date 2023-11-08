@@ -1,12 +1,15 @@
 #!/bin/sh
 
-# ALIASES ------------------------------------------------------------
-alias aliases="alias -p" # list user-defined aliases
+# ALIASES -------------------------------------------------------------------------------------------------------
+list_user_aliases_func() {
+  alias -p
+}
+alias aliases=list_user_aliases_func
 
-# BIOS ------------------------------------------------------------
+# BIOS -------------------------------------------------------------------------------------------------------
 alias boot_bios="sudo systemctl reboot --firmware-setup"
 
-# KEY TRACKING ------------------------------------------------------------
+# KEY TRACKING -------------------------------------------------------------------------------------------------------
 # interactive mechanism to track which keys the system recognizes was pressed.
 # useful if using different types of keyboards to see what the system thinks the keys are
 track_key_func() {
@@ -15,7 +18,7 @@ track_key_func() {
 }
 alias track_key=track_key_func
 
-# CLAMAV -----------------------------------------------------------------
+# CLAMAV ------------------------------------------------------------------------------------------------------------
 # clamd is the virus scanner engine.
 # clamdscan submits files to it for scanning
 # clamav-milter submits email for scanning.
@@ -35,3 +38,70 @@ fresh_clamscan_func() {
   clamdscan --fdpass /
 }
 alias fresh_clamscan=fresh_clamscan_func
+
+# COMMANDS -----------------------------------------------------------------------------------------------
+cmd_exists_func() {
+  # usage: `if cmd_exists mycommand; then`
+  if ! type "$1" &> /dev/null; then
+    error "command: $1 doesnt exist"
+    return 1
+  fi;
+}
+alias cmd_exists=cmd_exists_func
+
+# VARIABLES -----------------------------------------------------------------------------------------------
+is_variable_empty_func() {
+  test -z $1
+}
+alias isempty=is_variable_empty_func
+
+# FILES / DIRECTORIES --------------------------------------------------------------------------------------
+# usage `findfile index.hml ~/code`
+findfile_func() {
+  warn "usage: findfile {PATTERN} {DIR}"
+  find $2 -name "*$1*"
+}
+alias findfile=findfile_func
+alias findfiles=findfile_func
+
+# GREP / MATCH / REGEX -------------------------------------------------------------------------------------
+# bash regex literals https://unix.stackexchange.com/a/530359/590411
+alias regex_literals="echo alnum alpha ascii blank cntrl digit graph lower print punct space upper word xdigit"
+grep_exclude_func() {
+  grep -v $@
+}
+alias grepexclude=grep_exclude_func
+
+# PERMISSIONS ----------------------------------------------------------------------------------------------
+can_write_file_or_dir_func() {
+  test -e $1 && test -w $1
+}
+alias can_write=can_write_file_or_dir_func
+
+can_read_file_or_dir_func() {
+  test -e $1 && test -r $1
+}
+alias can_read=can_read_file_or_dir_func
+
+can_execute_file_func() {
+  test -e $1 && test -x $1
+}
+alias can_execute=can_execute_file_func
+
+# DEBUGGING ALIASES -----------------------------------------------------------------------------------------
+yes_or_no_func() {
+  # usage: yesorno can_write ~/
+  # usage: yesorno can_read_file_or_dir_func ~/
+  # echos: "yes" or "no" depending on 1 or 0 code returned
+  user_alias=$(alias -p | grep "alias $1=") # "alias can_read='can_read_file_or_dir_func'"
+  if [ -z "$user_alias" ]; then
+    $@ && echo "yes" || echo "no"
+  else # is user alias
+    [[ $user_alias =~ \ *?alias\ .*=\'(.*)\' ]] && \
+      user_alias_func_name=$(echo "${BASH_REMATCH[1]}")
+    shift # remove first arg
+    # $user_alias_func_name="can_read_file_or_dir_func"
+    $user_alias_func_name $@ && echo "yes" || echo "no"
+  fi
+}
+alias yesorno=yes_or_no_func
