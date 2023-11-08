@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # DOCK ---------------------------------------------------------------------------------------------------------------
+# todo make a /usr/bin executable so we can call this function from custom keyboard shortcuts
 toggle_dock_enabled_func() {
   dock_enabled=$(gnome-extensions info cosmic-dock@system76.com | grep ENABLED)
   if [ -z "$dock_enabled" ]; then
