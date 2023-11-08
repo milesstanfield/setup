@@ -107,7 +107,7 @@ current_user_does_own_file_or_dir_func() {
 alias do_own=current_user_does_own_file_or_dir_func
 
 
-# DEBUGGING ALIASES -----------------------------------------------------------------------------------------
+# DEBUGGING -----------------------------------------------------------------------------------------
 yes_or_no_func() {
   # usage: yesorno can_write ~/
   # usage: yesorno can_read_file_or_dir_func ~/
@@ -124,3 +124,25 @@ yes_or_no_func() {
   fi
 }
 alias yesorno=yes_or_no_func
+
+start_system_auditing_func() {
+  warn "stopping auditd service ..."
+  sudo service auditd stop
+
+  log_path="/var/log/audit/audit.log"
+  warn "clearing previous log $log_path"
+  sudo rm -rf $log_path
+  sudo touch $log_path
+
+  warn "starting auditd service ..."
+  sudo service auditd start
+
+  warn "setting auditing rule for 'all_changes' ..."
+  sudo auditctl -w / -p wa -k all_changes
+
+  success "tailing changes at $log_path ..."
+  warn "remember to stop with 'stop_system_auditing'"
+  sudo tail -f $log_path
+}
+alias start_system_auditing=start_system_auditing_func
+alias stop_system_auditing="sudo service auditd stop"

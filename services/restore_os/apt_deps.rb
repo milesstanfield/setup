@@ -17,6 +17,7 @@ module RestoreOS
             ifuse: allows to mount iPhone and access its file system in linux
             dconf-editor: is a GUI for dconf (settings)
             flatpak: package manager
+            auditd: gives auditctl cli tool for kernel audit logging
         EOF
       )
     end
@@ -30,7 +31,8 @@ module RestoreOS
             libimobiledevice-utils \
             ifuse \
             dconf-editor \
-            flatpak
+            flatpak \
+            auditd
         EOF
       )
     end
