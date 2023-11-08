@@ -219,7 +219,7 @@ maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=@as []
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 eject=@as []
 email=@as []
 help=@as []
@@ -234,13 +234,8 @@ www=@as []
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Primary><Alt>d'
-command='gnome-extensions disable cosmic-dock@system76.com'
-name='hide dock'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding='<Primary><Shift>d'
-command='gnome-extensions enable cosmic-dock@system76.com'
-name='show doc'
+command='miles toggledock'
+name='toggle dock enabled'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=1800
