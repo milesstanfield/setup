@@ -12,7 +12,7 @@ module BackupOS
     end
 
     def backup_settings!
-      system("cp /home/$USER/snap/1password/132/.config/1Password/settings/settings.json #{path}")
+      system("cp /home/$USER/.config/1Password/settings/settings.json #{path}")
     end
 
     def path

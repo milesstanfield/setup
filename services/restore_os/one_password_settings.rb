@@ -14,7 +14,7 @@ module RestoreOS
     def load_settings!
       system(
         <<~EOF.gsub(/\s+/, " ")
-          cp #{path} /home/$USER/snap/1password/132/.config/1Password/settings/settings.json
+          cp #{path} /home/$USER/.config/1Password/settings/settings.json
         EOF
       )
     end

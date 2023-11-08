@@ -7,7 +7,8 @@ module RestoreOS
   def restore_dependencies!
     system("sudo apt-get update") &&
       ::RestoreOS::AptDeps.new.install! &&
-      ::RestoreOS::FlatpakDeps.new.install!
+      ::RestoreOS::FlatpakDeps.new.install! &&
+      ::RestoreOS::OnePasswordInstaller.new.install!
   end
 
   def restore_settings!
@@ -17,6 +18,7 @@ module RestoreOS
       # load vscode settings and keybindings after installing vscode extensions cuz
       # there could be settings and keybindings specific to an extension
       ::RestoreOS::VscodeSettings.new.load! &&
-      ::RestoreOS::VscodeKeybindings.new.load!
+      ::RestoreOS::VscodeKeybindings.new.load! &&
+      ::RestoreOS::OnePasswordSettings.new.load!
   end
 end

@@ -5,10 +5,10 @@ end
 
 module BackupOS
   def backup_settings!
-    # todo add 1password
     ::BackupOS::DconfSettings.new.backup! &&
       ::BackupOS::VscodeExtensions.new.backup! &&
       ::BackupOS::VscodeSettings.new.backup! &&
-      ::BackupOS::VscodeKeybindings.new.backup!
+      ::BackupOS::VscodeKeybindings.new.backup! &&
+      ::BackupOS::OnePasswordSettings.new.backup!
   end
 end
