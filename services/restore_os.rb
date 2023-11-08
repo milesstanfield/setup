@@ -12,7 +12,6 @@ module RestoreOS
   end
 
   def restore_settings!
-    # todo add 1password
     ::RestoreOS::DconfSettings.new.load! &&
       ::RestoreOS::VscodeExtensions.new.install! &&
       # load vscode settings and keybindings after installing vscode extensions cuz
