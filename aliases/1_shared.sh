@@ -50,7 +50,7 @@ cmd_exists_func() {
 }
 alias cmd_exists=cmd_exists_func
 
-# FILES / DIRECTORIES ----------------------------------------------------
+# FILES / DIRECTORIES -------------------------------------------
 # usage `findfile index.hml ~/code`
 findfile_func() {
   warn "usage: findfile {PATTERN} {DIR}"
@@ -59,7 +59,24 @@ findfile_func() {
 alias findfile=findfile_func
 alias findfiles=findfile_func
 
+# GREP / SEARCH -------------------------------------------------
 grep_exclude_func() {
   grep -v $@
 }
 alias grepexclude=grep_exclude_func
+
+# PERMISSIONS ---------------------------------------------------
+can_write_file_or_dir_func() {
+  test -w $1
+}
+alias can_write=can_write_file_or_dir_func
+
+can_read_file_or_dir_func() {
+  test -r $1
+}
+alias can_read=can_read_file_or_dir_func
+
+can_execute_file_func() {
+  test -f $1 && test -x $1
+}
+alias can_execute=can_execute_file_func

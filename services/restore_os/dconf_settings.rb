@@ -13,7 +13,7 @@ module RestoreOS
           loading system dconf which restores settings for:
             Pop!_OS: various (but not all) settings
             gnome-terminal: colors, shortcuts, etc
-            IBus Preferences: fixing ctrl+shift+e VSCode shortcut
+            IBus Preferences: fixing ctrl+shift+e VSCode shortcut (via ibus-setup GUI)
         EOF
       )
     end
