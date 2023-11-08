@@ -1,0 +1,20 @@
+#!/bin/bash
+
+commands=(toggledock help --help -h)
+
+toggledock() {
+  dock_enabled=$(gnome-extensions info cosmic-dock@system76.com | grep ENABLED)
+  if [ -z "$dock_enabled" ]; then
+    gnome-extensions enable cosmic-dock@system76.com
+  else
+    gnome-extensions disable cosmic-dock@system76.com
+  fi
+}
+
+for command in "${commands[@]}"; do
+  if [ "$command" == "$1" ]; then
+    $1
+  fi
+done
+
+# todo implement better CLI interface with --help and things

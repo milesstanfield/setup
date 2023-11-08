@@ -32,7 +32,7 @@ module RestoreOS
 
     def extensions # ["bung87.rails", "bung87.vscode-gemfile"]
       return @extensions if defined?(@extensions)
-      file_path = "/home/milesstanfield/code/setup/settings/vscode/extensions.txt"
+      file_path = "/home/$USER/code/setup/settings/vscode/extensions.txt"
       @extensions = File.readlines(file_path, chomp: true).to_a
     end
   end

@@ -1,5 +1,5 @@
-require "/home/milesstanfield/code/setup/services/restore_os/base.rb"
-Dir["/home/milesstanfield/code/setup/services/restore_os/*.rb"].each do |file|
+require "/home/$USER/code/setup/services/restore_os/base.rb"
+Dir["/home/$USER/code/setup/services/restore_os/*.rb"].each do |file|
   require file unless file.match?(/restore_os\/base\.rb/)
 end
 

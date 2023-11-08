@@ -1,4 +1,4 @@
-require "/home/milesstanfield/code/setup/services/color.rb"
+require "/home/$USER/code/setup/services/color.rb"
 
 module BackupOS
   class Base

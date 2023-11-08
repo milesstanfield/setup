@@ -7,6 +7,12 @@ if [ -d ~/code/setup/aliases ]; then
   done
 fi
 
+# CUSTOM [miles] CLI -------------------------------------------------------------
+if ! cmd_exists_func miles; then
+  error "run the following to install [miles] cli:"
+  error "sudo cp ~/code/setup/executables/miles /usr/local/bin && sudo chmod +x /usr/local/bin/miles"
+fi
+
 # RUBY ----------------------------------------------------------------
 export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
 eval "$(rbenv init -)" # load rbenv
