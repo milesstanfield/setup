@@ -14,8 +14,8 @@ window-y=177
 hotkey=@as []
 
 [io/elementary/appcenter/settings]
-cached-drivers=['nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)']
-last-refresh-time=int64 1699367190
+cached-drivers=['nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)', 'nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)']
+last-refresh-time=int64 1699453625
 window-maximized=false
 window-size=(1720, 1336)
 
@@ -24,7 +24,7 @@ window-size=(960, 600)
 window-state=87168
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='mouse'
 
 [org/gnome/desktop/a11y/magnifier]
 mag-factor=9.0
@@ -111,7 +111,7 @@ application-id='org.signal.Signal.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 natural-scroll=true
-speed=-0.30147058823529416
+speed=-0.44117647058823528
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
