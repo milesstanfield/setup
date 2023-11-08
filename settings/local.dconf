@@ -24,7 +24,7 @@ window-size=(960, 600)
 window-state=87168
 
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='desktop-dock'
 
 [org/gnome/desktop/a11y/magnifier]
 mag-factor=9.0
