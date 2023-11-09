@@ -8,7 +8,7 @@ if [ -d ~/code/setup/aliases ]; then
 fi
 
 # CUSTOM [miles] CLI -------------------------------------------------------------
-if ! cmd_exists miles; then
+if type cmd_exists &> /dev/null && ! cmd_exists miles ; then
   error "run the following to install [miles] cli:"
   error "sudo cp ~/code/setup/executables/miles /usr/local/bin && sudo chmod +x /usr/local/bin/miles"
 fi
