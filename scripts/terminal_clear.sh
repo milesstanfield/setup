@@ -9,5 +9,6 @@
 
 win=$(xdotool getactivewindow)
 xdotool windowfocus $win
-xdotool key ctrl+k # reset
-xdotool key ctrl+l # clear
+xdotool key ctrl+k # idk why but this is necessary
+xdotool key shift+ctrl+8 # reset (per terminal settings)
+xdotool key Return # show prompt
