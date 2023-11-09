@@ -30,7 +30,7 @@ module RestoreOS
 
     def install_1password!
       warn("installing 1Password ...") &&
-        system("sudo apt update && sudo apt install 1password")
+        system("sudo apt update && sudo apt install 1password -y")
     end
   end
 end

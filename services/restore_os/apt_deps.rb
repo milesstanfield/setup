@@ -13,11 +13,11 @@ module RestoreOS
           installing utility dependencies ---
             dbus-x11: for using sudo dconf load in load_settings alias
             vim: for working in git and editing commit messages
-            libimobiledevice-utils: gives idevicepair cli to pair/access mounted iphones
+            libimobiledevice-utils: provides idevicepair tool for pairing mounted iphones
             ifuse: allows to mount iPhone and access its file system in linux
             dconf-editor: is a GUI for dconf (settings)
             flatpak: package manager
-            auditd: gives auditctl cli tool for kernel audit logging
+            auditd: provides auditctl tool for kernel audit logging
         EOF
       )
     end

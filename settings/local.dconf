@@ -340,7 +340,7 @@ theme-variant='dark'
 [org/gnome/terminal/legacy/keybindings]
 close-tab='<Primary>w'
 close-window='<Primary>q'
-copy='<Primary><Shift>c'
+copy='<Primary>c'
 find='<Primary>f'
 find-next='<Primary>g'
 header-menu='disabled'
