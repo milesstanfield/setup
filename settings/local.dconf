@@ -219,7 +219,7 @@ maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=@as []
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 eject=@as []
 email=@as []
 help=@as []
@@ -234,8 +234,13 @@ www=@as []
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Primary><Alt>d'
-command='miles toggledock'
+command='miles toggle_dock'
 name='toggle dock enabled'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Primary>k'
+command='miles clear_terminal'
+name='clear terminal'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=1800
@@ -345,7 +350,7 @@ next-tab='<Primary>braceright'
 paste='<Primary>v'
 prev-tab='<Primary>braceleft'
 reset='disabled'
-reset-and-clear='<Primary>k'
+reset-and-clear='disabled'
 select-all='<Primary>a'
 toggle-menubar='<Primary>m'
 zoom-in='<Primary>equal'

@@ -1,8 +1,21 @@
 #!/bin/bash
 
-commands=(toggledock help --help -h)
+help_commands=(help -h --help)
+commands=(toggle_dock clear_terminal)
 
-toggledock() {
+# COLORS -----------------------------------------------------------------------------------------------------
+RED='\033[0;31m'
+NOCOLOR='\033[0m'
+
+error_func() {
+   echo -e "${RED}$1${NOCOLOR}"
+}
+
+clear_terminal_func() {
+  /usr/bin/bash /home/$USER/code/setup/scripts/clear_terminal.sh
+}
+
+toggle_dock_func() {
   dock_enabled=$(gnome-extensions info cosmic-dock@system76.com | grep ENABLED)
   if [ -z "$dock_enabled" ]; then
     gnome-extensions enable cosmic-dock@system76.com
@@ -11,10 +24,46 @@ toggledock() {
   fi
 }
 
+describe_clear_terminal_func() {
+  echo "    clear_terminal           reset and clear the active terminal"
+}
+
+describe_toggle_dock_func() {
+  echo "    toggle_dock              toggle visibility of the dock"
+}
+
+describe_help_func() {
+  echo "    help, -h, --help         display this help and exit"
+}
+
+usage_func() {
+  echo "Usage: miles [COMMAND]"
+  echo "COMMANDS:"
+  for command in "${commands[@]}"; do
+    "describe_${command}_func"
+  done
+  describe_help_func
+}
+
+invalid_command_func() {
+  error_func "'$1' is not a valid COMMAND"
+  usage_func
+  exit 1
+}
+
 for command in "${commands[@]}"; do
-  if [ "$command" == "$1" ]; then
-    $1
+  for arg in "$@"; do
+    if [[ "${help_commands[*]}" =~ "$arg" ]]; then
+      usage_func
+      exit 0
+    fi
+  done
+
+  if ! [ "$2" == "" ]; then # cli doesnt currently support [SUB_COMMANDS]
+    invalid_command_func "$1 $2"
+  elif [ "$command" == "$1" ]; then
+    "$1_func"
   fi
 done
 
-# todo implement better CLI interface with --help and things
+invalid_command_func $1
