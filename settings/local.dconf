@@ -14,8 +14,8 @@ window-y=177
 hotkey=@as []
 
 [io/elementary/appcenter/settings]
-cached-drivers=['nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)', 'nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)']
-last-refresh-time=int64 1699540054
+cached-drivers=['nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)']
+last-refresh-time=int64 1699626476
 window-maximized=false
 window-size=(1720, 1336)
 
@@ -64,7 +64,7 @@ show-battery-percentage=true
 autorun-never=false
 
 [org/gnome/desktop/notifications]
-application-children=['gnome-control-center', 'io-elementary-appcenter', 'org-gnome-software', 'org-gnome-terminal', 'firefox', 'gnome-power-panel', 'org-gnome-tweaks', 'com-discordapp-discord', 'org-signal-signal', 'com-vixalien-sticky', 'org-gnome-nautilus', 'org-gimp-gimp', 'org-gnome-eog', 'flatpak-installer']
+application-children=['gnome-control-center', 'io-elementary-appcenter', 'org-gnome-software', 'org-gnome-terminal', 'firefox', 'gnome-power-panel', 'org-gnome-tweaks', 'com-discordapp-discord', 'org-signal-signal', 'com-vixalien-sticky', 'org-gnome-nautilus', 'org-gimp-gimp', 'org-gnome-eog', 'flatpak-installer', 'org-gnome-diskutility']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/com-discordapp-discord]
@@ -90,6 +90,9 @@ application-id='io.elementary.appcenter.desktop'
 
 [org/gnome/desktop/notifications/application/org-gimp-gimp]
 application-id='org.gimp.GIMP.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-diskutility]
+application-id='org.gnome.DiskUtility.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-eog]
 application-id='org.gnome.eog.desktop'
@@ -234,17 +237,17 @@ www=@as []
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Primary><Alt>d'
-command='miles dock --toggle'
+command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/dock_toggle.sh'
 name='toggle dock enabled'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Primary>k'
-command='/usr/bin/bash /usr/local/bin/miles terminal --clear'
+command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/terminal_clear.sh'
 name='terminal clear'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Primary><Shift>Up'
-command='/usr/bin/bash /usr/local/bin/miles terminal --scroll-top'
+command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/terminal_scroll_top.sh'
 name='terminal scroll top'
 
 [org/gnome/settings-daemon/plugins/power]
