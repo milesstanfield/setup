@@ -8,11 +8,13 @@
   "keybinds.lock": "",
   "keybinds.autoFill": "",
   "app.defaultVaultForSaving": "{\"VaultReference\":{\"vault_uuid\":\"pcl7iowtmxlw4piy5b5vvr6hxi\",\"account_uuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"}}",
+  "keybinds.open": "CommandOrControl+[1]1",
   "authTags": {
     "app.defaultVaultForSaving": "H5z+EcNodb00HfY1wpxJknE64gnWQSR5YoJlxENVb0U",
     "app.theme": "0rlNRz/m048jWdm1DqLdgbIgjszFAhRScrIhlijxcKo",
     "keybinds.autoFill": "mjVWU0NVW+BzOEfinsGJVYlbRxyZswr7KMkMTRXv2oo",
     "keybinds.lock": "1ebqQwJsP+/Ku4uw9K5wDaez594znz/pEji+VdB0fpE",
+    "keybinds.open": "wMwGoOJ4aZ2w28s3ythLOAtMldOJzg1DQOYBoiIS6yI",
     "keybinds.quickAccess": "9cBHjx7Gdww6UnsicrDUczGuxz18BFxCYbrzQR0zXyY",
     "security.authenticatedUnlock.enabled": "pS5ZToyxHQuLUXo4LAo94nIJy3OxNCcbG7Cp+Qag5Q8",
     "sshAgent.sshAuthorizatonModel": "A5X4aXZLdeSRy3vt0cCN+JshYQLjBBIiS7M0Si250vM",
