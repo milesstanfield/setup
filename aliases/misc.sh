@@ -56,3 +56,11 @@ grep_exclude_func() {
   grep -v $@
 }
 alias grepexclude=grep_exclude_func
+
+
+# BASH PROCESSES
+pidstatus_func() {
+  pid=$(if [ "$1" == "" ]; then echo "$$"; else echo "$1"; fi)
+  cat "/proc/$pid/status"
+}
+alias pidstatus=pidstatus_func
