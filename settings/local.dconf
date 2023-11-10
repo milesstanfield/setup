@@ -27,7 +27,7 @@ window-state=87168
 last-panel='keyboard'
 
 [org/gnome/desktop/a11y/magnifier]
-mag-factor=9.0
+mag-factor=11.0
 
 [org/gnome/desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -219,7 +219,7 @@ maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=@as []
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 eject=@as []
 email=@as []
 help=@as []
@@ -239,18 +239,13 @@ name='toggle dock enabled'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Primary>k'
-command='miles terminal --clear'
-name='terminal clear (ctrl+k)'
+command='/usr/bin/bash /usr/local/bin/miles terminal --clear'
+name='terminal clear'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Primary><Shift>Up'
-command='miles terminal --scroll-top'
+command='/usr/bin/bash /usr/local/bin/miles terminal --scroll-top'
 name='terminal scroll top'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
-binding='<Primary>l'
-command='miles terminal --clear'
-name='terminal clear (ctrl+l)'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=1800
@@ -362,12 +357,12 @@ next-tab='<Primary>braceright'
 paste='<Primary>v'
 prev-tab='<Primary>braceleft'
 reset='disabled'
-reset-and-clear='<Primary>asterisk'
+reset-and-clear='<Primary><Shift>k'
 select-all='<Primary>a'
 toggle-menubar='<Primary>m'
-zoom-in='<Primary>equal'
+zoom-in='<Primary>plus'
 zoom-normal='<Primary>0'
-zoom-out='<Primary>minus'
+zoom-out='<Primary>underscore'
 
 [org/gnome/terminal/legacy/profiles:]
 list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
