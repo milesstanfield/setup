@@ -15,7 +15,7 @@ path_readable_func() {
 }
 
 variable_is_empty_func() {
-  test -z "$1" # todo this was necessary, but is it necessary on all the others or will it hurt?
+  test -z "$1" # quote here was absolutely necessary .. but why? for doc help $@ where multiple args given
 }
 
 file_is_present_func() {

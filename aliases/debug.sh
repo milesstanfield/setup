@@ -9,11 +9,6 @@ alias setexecutable="sudo chmod +x $1" # usage: setexecutable /usr/local/bin/mil
 # "$@" is equivalent to "$1" "$2"
 # "$*" is equivalent to "$1c$2c..." (where c is the first character of the value of the IFS variable)
 
-
-# bash regex literals https://unix.stackexchange.com/a/530359/590411
-alias regexliterals="echo alnum alpha ascii blank cntrl digit graph lower print punct space upper word xdigit"
-# todo write echo for regex hints in bash
-
 yes_or_no_func() {
   # usage: yesorno iown /usr
   # echo's "yes" or "no" depending truthy evaluation of expression given

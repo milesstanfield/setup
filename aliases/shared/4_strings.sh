@@ -56,10 +56,9 @@ excludes_func() {
 }
 
 split_func() {
-  doc help $@ && doc usage "split <str> <substring>" && return
-  # todo this appears to support regex?
-  # todo change to -P for perl ?
-  echo "$1" | sed -r "s/${2}/\n/g"
+  doc help $@ && doc usage "split <str> <pattern>" && return
+  str=$(remove_surrounding_regex_slashes_or_not_func "$2")
+  echo -e "$1" | perl -pe "s/${str}/\n/g"
 }
 
 chomp_func() {
