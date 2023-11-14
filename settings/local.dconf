@@ -14,8 +14,8 @@ window-y=177
 hotkey=@as []
 
 [io/elementary/appcenter/settings]
-cached-drivers=['nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-535, (kernel modules provided by nvidia-dkms-535)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)']
-last-refresh-time=int64 1699626476
+cached-drivers=['nvidia-driver-545, (kernel modules provided by nvidia-dkms-545)', 'nvidia-driver-525-server, (kernel modules provided by nvidia-dkms-525-server)', 'nvidia-driver-535-server, (kernel modules provided by nvidia-dkms-535-server)', 'nvidia-driver-525-open, (kernel modules provided by nvidia-dkms-525-open)', 'nvidia-driver-535-server-open, (kernel modules provided by nvidia-dkms-535-server-open)', 'nvidia-driver-470-server, (kernel modules provided by nvidia-dkms-470-server)', 'nvidia-driver-470, (kernel modules provided by nvidia-dkms-470)', 'nvidia-driver-545-open, (kernel modules provided by nvidia-dkms-545-open)', 'nvidia-driver-535-open, (kernel modules provided by nvidia-dkms-535-open)']
+last-refresh-time=int64 1699991770
 window-maximized=false
 window-size=(1720, 1336)
 
@@ -27,7 +27,7 @@ window-state=87168
 last-panel='keyboard'
 
 [org/gnome/desktop/a11y/magnifier]
-mag-factor=11.0
+mag-factor=10.0
 
 [org/gnome/desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -69,6 +69,7 @@ show-banners=true
 
 [org/gnome/desktop/notifications/application/com-discordapp-discord]
 application-id='com.discordapp.Discord.desktop'
+force-expanded=true
 
 [org/gnome/desktop/notifications/application/com-vixalien-sticky]
 application-id='com.vixalien.sticky.desktop'
@@ -222,7 +223,7 @@ maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=@as []
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 eject=@as []
 email=@as []
 help=@as []
@@ -246,9 +247,9 @@ command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/terminal_clear.sh
 name='terminal clear'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
-binding='<Primary><Shift>Up'
-command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/terminal_scroll_top.sh'
-name='terminal scroll top'
+binding='<Primary>Up'
+command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/scroll_top.sh'
+name='scroll top'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=1800

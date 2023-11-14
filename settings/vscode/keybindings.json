@@ -66,11 +66,6 @@
     "when": "textInputFocus"
   },
   {
-    "key": "shift+alt+ctrl+up",
-    "command": "cursorColumnSelectUp",
-    "when": "textInputFocus"
-  },
-  {
     "key": "super+n",
     "command": "cursorDown",
     "when": "textInputFocus"
@@ -198,7 +193,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+up",
+    "key": "ctrl+shift+alt+up",
     "command": "cursorTop",
     "when": "textInputFocus"
   },
@@ -697,11 +692,6 @@
     "key": "shift+f12",
     "command": "editor.action.goToReferences",
     "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "editor.action.goToTopHover",
-    "when": "editorHoverFocused"
   },
   {
     "key": "home",
@@ -2079,11 +2069,6 @@
   {
     "key": "ctrl+down",
     "command": "interactive.scrollToBottom",
-    "when": "activeEditor == 'workbench.editor.interactive'"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "interactive.scrollToTop",
     "when": "activeEditor == 'workbench.editor.interactive'"
   },
   {
@@ -4472,5 +4457,10 @@
   {
     "key": "ctrl+shift+e",
     "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
