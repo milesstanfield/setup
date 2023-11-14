@@ -4,7 +4,6 @@
 # usage: bash ~/code/setup/scripts/terminal_scroll_top.sh
 
 # todo only do this if the active window is for gnome-terminal
-# todo xdotool key End # WORKS (for down)
 
 win=$(xdotool getactivewindow)
 xdotool windowfocus $win

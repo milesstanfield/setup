@@ -9,6 +9,7 @@ alias start_freshclam="sudo freshclam"
 alias stop_freshclam="sudo systemctl stop clamav-freshclam.service"
 alias start_clamd="sudo clamd"
 alias stop_clamd="sudo systemctl stop clamav-daemon.service"
+
 # Use clamdscan with the --fdpass option so that the "clamav" user doesn't
 # need to be able to read amavis's private working directory.
 # config file located ~/freshclam.conf

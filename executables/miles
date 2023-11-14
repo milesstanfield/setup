@@ -3,7 +3,7 @@
 # usage: miles terminal --clear
 
 # uncomment and add the following lines to your ~/.bashrc after custom aliases are sourced
-  # if type cmd_exists &> /dev/null && ! cmd_exists miles ; then
+  # if type cmdexists &> /dev/null && ! cmdexists miles ; then
   #   error "run the following to install [miles] cli:"
   #   error "sudo cp ~/code/setup/executables/miles /usr/local/bin && sudo chmod +x /usr/local/bin/miles"
   # fi

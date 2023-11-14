@@ -1,10 +1,8 @@
 # ALIASES -------------------------------------------------------------
 # source all alias .sh files from ~/code/aliases
 if [ -d ~/code/setup/aliases ]; then
-  for filename in ~/code/setup/aliases/*.sh; do
-    [ -e "$filename" ] || continue
-    source $filename
-  done
+  for path in ~/code/setup/aliases/shared/*.sh; do source $path; done
+  for path in ~/code/setup/aliases/*.sh; do source $path; done
 fi
 
 # RUBY ----------------------------------------------------------------

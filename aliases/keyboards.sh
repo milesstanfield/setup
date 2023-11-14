@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# MAC KEYBOARD ------------------------------------------------------------
+# RESET ------------------------------------------------------------
 alias reset_keys="setxkbmap -layout us"
+
+# MAC KEYBOARD ------------------------------------------------------------
 alias mac="reset_keys && xmodmap ~/code/setup/xmodmaps/super_L_as_ctrl_L.Xmodmap"
 # ----WAS           ----NOW
 # FN                FN

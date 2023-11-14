@@ -6,10 +6,6 @@ docker_compose_up_func() {
 }
 alias dcstart=docker_compose_up_func
 
-docker_compose_func() {
-  docker compose --file ~/code/setup/docker/docker-compose.yml $@
-}
-alias dc=docker_compose_func
-
-alias dc_prune="docker system prune"
-alias dc_prune_all="docker system prune -a"
+alias dc="docker compose --file ~/code/setup/docker/docker-compose.yml $@"
+alias dcprune="docker system prune"
+alias dcpruneall="docker system prune -a"

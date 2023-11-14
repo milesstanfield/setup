@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # SETTINGS ----------------------------------------------------
-alias backup_settings="ruby ~/code/setup/scripts/backup_settings.rb"
+alias backupsettings="ruby ~/code/setup/scripts/backup_settings.rb"

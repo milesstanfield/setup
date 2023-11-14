@@ -1,11 +1,24 @@
 #!/bin/sh
 
+alias swallow="$1 &> /dev/null"
+alias playground="bash /home/$USER/code/setup/tmp/playground.sh"
+alias setowner="sudo chown $1:$1 $2" # usage: setowner whoami /some-file-or-dir
+alias setexecutable="sudo chmod +x $1" # usage: setexecutable /usr/local/bin/miles
+
+# notes:
+# "$@" is equivalent to "$1" "$2"
+# "$*" is equivalent to "$1c$2c..." (where c is the first character of the value of the IFS variable)
+
+
+# bash regex literals https://unix.stackexchange.com/a/530359/590411
+alias regexliterals="echo alnum alpha ascii blank cntrl digit graph lower print punct space upper word xdigit"
+# todo write echo for regex hints in bash
+
 yes_or_no_func() {
-  # usage: yesorno can_write ~/
-  # usage: yesorno can_read_file_or_dir_func ~/
-  # echos: "yes" or "no" depending on 1 or 0 code returned
+  # usage: yesorno iown /usr
+  # echo's "yes" or "no" depending truthy evaluation of expression given
   user_alias=$(alias -p | grep "alias $1=") # "alias can_read='can_read_file_or_dir_func'"
-  if [ -z "$user_alias" ]; then
+  if varempty $user_alias; then # is not user alias
     $@ && echo "yes" || echo "no"
   else # is user alias
     [[ $user_alias =~ \ *?alias\ .*=\'(.*)\' ]] && \
@@ -33,8 +46,17 @@ start_system_auditing_func() {
   sudo auditctl -w / -p wa -k all_changes
 
   success "tailing changes at $log_path ..."
-  warn "remember to stop with 'stop_system_auditing'"
+  warn "remember to stop with 'stopauditing'"
   sudo tail -f $log_path
 }
-alias start_system_auditing=start_system_auditing_func
-alias stop_system_auditing="sudo service auditd stop"
+alias startauditing=start_system_auditing_func
+alias stopauditing="sudo service auditd stop"
+
+# KEY TRACKING -------------------------------------------------------------------------------------------------------
+# interactive mechanism to track which keys the system recognizes was pressed.
+# useful if using different types of keyboards to see what the system thinks the keys are
+track_key_func() {
+  warn "can also run 'sudo showkey'"
+  xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+}
+alias track_key=track_key_func
