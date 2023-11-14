@@ -7,7 +7,6 @@ win_id=$(xdotool getactivewindow)
 win_name=$(xdotool getwindowfocus getwindowname)
 xdotool windowfocus $win_id
 
-# only do this if the active window is for gnome-terminal
 if [[ "$win_name" =~ "milesstanfield@pop-os:" ]]; then
   incr=$((incr+1))
   max=100
@@ -17,7 +16,9 @@ if [[ "$win_name" =~ "milesstanfield@pop-os:" ]]; then
     ((incr+=1))
   done
 elif [[ "$win_name" =~ "Google Chrome" ]]; then
-  echo todo
+  sleep 0.06
+  # todo not working
+  xdotool key Home # fn+LeftArrow
 else # vscode and anything else
   sleep 0.06
   xdotool key ctrl+Shift+Alt+Up
