@@ -16,10 +16,19 @@
   "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none",
   "workbench.colorCustomizations": {
-    "statusBar.background" : "#141313",
-    "statusBar.noFolderBackground" : "#141313",
+    "statusBar.background": "#141313",
+    "statusBar.noFolderBackground": "#141313",
     "statusBar.debuggingBackground": "#141313"
   },
   "files.trimFinalNewlines": true,
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "rust-analyzer.hover.actions.debug.enable": false,
+  "rust-analyzer.hover.actions.run.enable": false,
+  "rust-analyzer.lens.run.enable": false,
+  "rust-analyzer.lens.debug.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.renderColons": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "editor.formatOnSave": true
 }

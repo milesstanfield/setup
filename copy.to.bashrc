@@ -9,6 +9,10 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
 eval "$(rbenv init -)" # load rbenv
 
+# Rust ----------------------------------------------------------------
+# https://rustup.rs/
+. "$HOME/.cargo/env"
+
 # GITHUB ------------------------------------------------------------
 # https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
 export GITHUB_USER=

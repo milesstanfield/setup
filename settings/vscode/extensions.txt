@@ -1,6 +1,7 @@
 bung87.rails
 bung87.vscode-gemfile
 foxundermoon.shell-format
+rust-lang.rust-analyzer
 sianglim.slim
 vayan.haml
 waderyan.gitblame
