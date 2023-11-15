@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sshAgent.sshAuthorizatonModel": "application",
-  "ui.routes.lastUsedRoute": "{\"type\":\"ItemDetail\",\"content\":{\"itemListRoute\":{\"unlockedRoute\":{\"collectionUuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"},\"itemListType\":{\"type\":\"Vault\",\"content\":\"6\"},\"category\":null,\"sortBehavior\":null},\"itemId\":\"114\"}}",
+  "ui.routes.lastUsedRoute": "{\"type\":\"ItemDetail\",\"content\":{\"itemListRoute\":{\"unlockedRoute\":{\"collectionUuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"},\"itemListType\":{\"type\":\"Vault\",\"content\":\"6\"},\"category\":null,\"sortBehavior\":null},\"itemId\":\"78\"}}",
   "security.authenticatedUnlock.enabled": false,
   "app.theme": "dark",
   "keybinds.quickAccess": "",
@@ -9,6 +9,7 @@
   "keybinds.autoFill": "",
   "app.defaultVaultForSaving": "{\"VaultReference\":{\"vault_uuid\":\"pcl7iowtmxlw4piy5b5vvr6hxi\",\"account_uuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"}}",
   "keybinds.open": "CommandOrControl+[1]1",
+  "sshAgent.promotionToastDismissed": true,
   "authTags": {
     "app.defaultVaultForSaving": "H5z+EcNodb00HfY1wpxJknE64gnWQSR5YoJlxENVb0U",
     "app.theme": "0rlNRz/m048jWdm1DqLdgbIgjszFAhRScrIhlijxcKo",
@@ -17,7 +18,8 @@
     "keybinds.open": "wMwGoOJ4aZ2w28s3ythLOAtMldOJzg1DQOYBoiIS6yI",
     "keybinds.quickAccess": "9cBHjx7Gdww6UnsicrDUczGuxz18BFxCYbrzQR0zXyY",
     "security.authenticatedUnlock.enabled": "pS5ZToyxHQuLUXo4LAo94nIJy3OxNCcbG7Cp+Qag5Q8",
+    "sshAgent.promotionToastDismissed": "jotRhUBrqAfgcPBmM9GWau6bBUexp/aHX32fccv2jxY",
     "sshAgent.sshAuthorizatonModel": "A5X4aXZLdeSRy3vt0cCN+JshYQLjBBIiS7M0Si250vM",
-    "ui.routes.lastUsedRoute": "k7AYRur8NwOvZ3qcSLg1LdIJLVxdfE/ZrbpFa7pxFA0"
+    "ui.routes.lastUsedRoute": "+QKRBDNiVvS2WFiPV6UbONi9e6ML/8QWWJNn54mCXBA"
   }
 }

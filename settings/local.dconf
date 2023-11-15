@@ -24,10 +24,10 @@ window-size=(960, 600)
 window-state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='applications'
 
 [org/gnome/desktop/a11y/magnifier]
-mag-factor=10.0
+mag-factor=11.0
 
 [org/gnome/desktop/app-folders/folders/Pop-Office]
 apps=['libreoffice-calc.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-math.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-writer.desktop']
@@ -223,7 +223,7 @@ maximized=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=@as []
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 eject=@as []
 email=@as []
 help=@as []
@@ -245,11 +245,6 @@ name='toggle dock enabled'
 binding='<Primary>k'
 command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/terminal_clear.sh'
 name='terminal clear'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
-binding='<Primary>Up'
-command='/usr/bin/bash /home/milesstanfield/code/setup/scripts/scroll_top.sh'
-name='scroll top'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=1800
@@ -409,7 +404,7 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=150
+sidebar-width=158
 sort-column='modified'
 sort-directories-first=true
 sort-order='descending'

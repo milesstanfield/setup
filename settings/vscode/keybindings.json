@@ -193,7 +193,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+alt+up",
+    "key": "ctrl+up",
     "command": "cursorTop",
     "when": "textInputFocus"
   },
