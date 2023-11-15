@@ -261,7 +261,7 @@ sleep-inactive-battery-type='suspend'
 command-history=['echo miles', 'xkill']
 disabled-extensions=['popx11gestures@system76.com', 'ding@rastersoft.com']
 enabled-extensions=['pop-cosmic@system76.com', 'pop-shell@system76.com', 'system76-power@system76.com', 'ubuntu-appindicators@ubuntu.com', 'cosmic-workspaces@system76.com', 'cosmic-dock@system76.com']
-favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', '1password.desktop', 'io.elementary.appcenter.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
+favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', 'com.slack.Slack.desktop', 'org.signal.Signal.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
 had-bluetooth-devices-setup=false
 welcome-dialog-last-shown-version='42.5'
 

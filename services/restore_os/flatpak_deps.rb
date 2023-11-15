@@ -15,6 +15,7 @@ module RestoreOS
           installing bespoke flatpak applications ---
             vscode: code editor
             discord: social messaging app
+            slack: social messaging app
             sticky notes: just what it sounds like
             chrome: internet browser
             flameshot: quick markup editor (like skitch)
@@ -30,6 +31,7 @@ module RestoreOS
           sudo flatpak install flathub -y \
             com.visualstudio.code \
             com.discordapp.Discord \
+            com.slack.Slack \
             com.vixalien.sticky \
             com.google.Chrome \
             org.flameshot.Flameshot \
