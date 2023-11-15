@@ -3,10 +3,10 @@
 # usage: miles terminal --clear
 
 # uncomment and add the following lines to your ~/.bashrc after custom aliases are sourced
-  # if type cmdexists &> /dev/null && ! cmdexists miles ; then
-  #   error "run the following to install [miles] cli:"
-  #   error "sudo cp ~/code/setup/executables/miles /usr/local/bin && sudo chmod +x /usr/local/bin/miles"
-  # fi
+# if type cmdexists &> /dev/null && ! cmdexists miles ; then
+#   error "run the following to install [miles] cli:"
+#   error "sudo cp ~/code/setup/executables/miles.sh /usr/local/bin/miles && sudo chmod +x /usr/local/bin/miles"
+# fi
 
 red='\033[0;31m'
 no_color='\033[0m'
