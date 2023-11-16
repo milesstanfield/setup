@@ -24,7 +24,7 @@ window-size=(960, 600)
 window-state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='bluetooth'
 
 [org/gnome/desktop/a11y/magnifier]
 mag-factor=11.0
@@ -192,7 +192,7 @@ maximized=false
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(1302, 1058, 1061, 188)
+window-state=(1302, 1058, 1735, 179)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -260,8 +260,8 @@ sleep-inactive-battery-type='suspend'
 command-history=['echo miles', 'xkill']
 disabled-extensions=['popx11gestures@system76.com', 'ding@rastersoft.com']
 enabled-extensions=['pop-cosmic@system76.com', 'pop-shell@system76.com', 'system76-power@system76.com', 'ubuntu-appindicators@ubuntu.com', 'cosmic-workspaces@system76.com', 'cosmic-dock@system76.com']
-favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', 'com.slack.Slack.desktop', 'org.signal.Signal.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
-had-bluetooth-devices-setup=false
+favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', 'com.slack.Slack.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
+had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='42.5'
 
 [org/gnome/shell/extensions/dash-to-dock]
