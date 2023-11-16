@@ -21,6 +21,7 @@ module RestoreOS
             flameshot: quick markup editor (like skitch)
             gimp: image editor (like photoshop)
             signal: secure messaging app
+            pithos: lightweight client for pandora streaming music service
         EOF
       )
     end
@@ -36,7 +37,8 @@ module RestoreOS
             com.google.Chrome \
             org.flameshot.Flameshot \
             org.gimp.GIMP \
-            org.signal.Signal
+            org.signal.Signal \
+            io.github.Pithos
         EOF
       )
     end
