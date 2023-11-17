@@ -6,12 +6,16 @@ if [ -d ~/code/setup/aliases ]; then
 fi
 
 # RUBY ----------------------------------------------------------------
-export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
-eval "$(rbenv init -)" # load rbenv
+if cmdexists rbenv; then
+  export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
+  eval "$(rbenv init -)"               # load rbenv
+fi
 
 # Rust ----------------------------------------------------------------
-# https://rustup.rs/
-. "$HOME/.cargo/env"
+if cmdexists rustc; then
+  # https://rustup.rs/
+  . "$HOME/.cargo/env"
+fi
 
 # GITHUB ------------------------------------------------------------
 # https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
