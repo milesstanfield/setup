@@ -13,8 +13,7 @@ fi
 
 # Rust ----------------------------------------------------------------
 if cmdexists rustc; then
-  # https://rustup.rs/
-  . "$HOME/.cargo/env"
+  . "$HOME/.cargo/env" # https://rustup.rs/
 fi
 
 # GITHUB ------------------------------------------------------------
