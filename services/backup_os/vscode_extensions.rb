@@ -12,7 +12,7 @@ module BackupOS
     end
 
     def backup_extensions!
-      system("echo \"$(code --list-extensions)\" > #{path}")
+      system("echo \"$(flatpak run com.visualstudio.code --list-extensions)\" > #{path}")
     end
 
     def path
