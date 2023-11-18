@@ -22,6 +22,7 @@ module RestoreOS
             gimp: image editor (like photoshop)
             signal: secure messaging app
             pithos: lightweight client for pandora streaming music service
+            Main Menu: customize the menu
         EOF
       )
     end
@@ -38,7 +39,8 @@ module RestoreOS
             org.flameshot.Flameshot \
             org.gimp.GIMP \
             org.signal.Signal \
-            io.github.Pithos
+            io.github.Pithos \
+            page.codeberg.libre_menu_editor.LibreMenuEditor
         EOF
       )
     end
