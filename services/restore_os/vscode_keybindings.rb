@@ -14,7 +14,7 @@ module RestoreOS
     def load_keybindings!
       system(
         <<~EOF.gsub(/\s+/, " ")
-          cp ~/code/setup/settings/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+          cp ~/code/setup/settings/vscode/keybindings.json ~/.var/app/com.visualstudio.code/config/Code/User/keybindings.json
         EOF
       )
     end

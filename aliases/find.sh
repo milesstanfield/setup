@@ -26,7 +26,6 @@ find_directory_func() {
   fi
 }
 
-# todo why isnt this working anymore?
 find_it_func() {
   doc help $@ && doc usage "findit <dir> <pattern>" \
     "options" \
