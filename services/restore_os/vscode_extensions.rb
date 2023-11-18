@@ -20,7 +20,7 @@ module RestoreOS
 
     def install_extensions!
       extensions.map do |ext|
-        stdout, stdeerr, status = Open3.capture3("code --install-extension #{ext}")
+        stdout, stdeerr, status = Open3.capture3("flatpak run com.visualstudio.code --install-extension #{ext}")
         if status.success?
           success(stdout)
         else
