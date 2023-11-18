@@ -25,5 +25,11 @@ export GITHUB_TOKEN=
 export AWS_VAULT_KEYCHAIN_NAME=login
 export AWS_DEFAULT_REGION=us-east-1
 
+# VSCode
+if ! cmdexists code && fileexists "/var/lib/flatpak/exports/bin/com.visualstudio.code"; then
+  warn "adding 'code' to /usr/bin/code ..."
+  sudo ln -s /var/lib/flatpak/exports/bin/com.visualstudio.code /usr/bin/code
+fi
+
 # GO! -----------------------------------------------------------------
 echo "make it simple. make it awesome"
