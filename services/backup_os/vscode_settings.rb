@@ -12,7 +12,7 @@ module BackupOS
     end
 
     def backup_settings!
-      system("cp ~/.config/Code/User/settings.json #{path}")
+      system("cp ~/.var/app/com.visualstudio.code/config/Code/User/settings.json #{path}")
     end
 
     def path

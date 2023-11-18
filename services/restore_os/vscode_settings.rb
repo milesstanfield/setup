@@ -14,8 +14,7 @@ module RestoreOS
     def load_settings!
       system(
         <<~EOF.gsub(/\s+/, " ")
-          mkdir -p ~/.config/Code/User && \
-            cp ~/code/setup/settings/vscode/settings.json ~/.config/Code/User/settings.json
+          cp ~/code/setup/settings/vscode/settings.json ~/.var/app/com.visualstudio.code/config/Code/User/settings.json
         EOF
       )
     end
