@@ -89,6 +89,9 @@ application-id='gnome-power-panel.desktop'
 [org/gnome/desktop/notifications/application/io-elementary-appcenter]
 application-id='io.elementary.appcenter.desktop'
 
+[org/gnome/desktop/notifications/application/io-github-pithos]
+application-id='io.github.Pithos.desktop'
+
 [org/gnome/desktop/notifications/application/org-gimp-gimp]
 application-id='org.gimp.GIMP.desktop'
 
@@ -260,12 +263,13 @@ sleep-inactive-battery-type='suspend'
 command-history=['echo miles', 'xkill']
 disabled-extensions=['popx11gestures@system76.com', 'ding@rastersoft.com']
 enabled-extensions=['pop-cosmic@system76.com', 'pop-shell@system76.com', 'system76-power@system76.com', 'ubuntu-appindicators@ubuntu.com', 'cosmic-workspaces@system76.com', 'cosmic-dock@system76.com']
-favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'code.desktop', 'com.discordapp.Discord.desktop', 'com.slack.Slack.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop']
+favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.visualstudio.code.desktop', 'org.gnome.Terminal.desktop', 'com.google.Chrome.desktop', 'com.slack.Slack.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='42.5'
 
 [org/gnome/shell/extensions/dash-to-dock]
 click-action='minimize-or-previews'
+dash-max-icon-size=48
 dock-fixed=true
 extend-height=false
 intellihide=false
