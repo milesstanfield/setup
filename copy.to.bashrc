@@ -24,11 +24,17 @@ export GITHUB_TOKEN=
 # AWS -----------------------------------------------------------------
 export AWS_VAULT_KEYCHAIN_NAME=login
 export AWS_DEFAULT_REGION=us-east-1
+export AWS_PROFILE=
 
-# Docker
+# Docker --------------------------------------------------------------
 export DOCKER_COMPOSE_PATH=/home/$USER/code/setup/docker/docker-compose.yml
 
-# VSCode
+# Homebrew ------------------------------------------------------------
+if test -f "/home/linuxbrew/.linuxbrew/bin/brew"; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+# VSCode --------------------------------------------------------------
 if ! type "code" &>/dev/null && test -f "/var/lib/flatpak/exports/bin/com.visualstudio.code"; then
   warn "adding 'code' to /usr/bin/code ..."
   sudo ln -s /var/lib/flatpak/exports/bin/com.visualstudio.code /usr/bin/code
