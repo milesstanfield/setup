@@ -23,8 +23,23 @@ window-size=(1720, 1336)
 window-size=(960, 600)
 window-state=87168
 
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(4388, 223)
+word-size=64
+
 [org/gnome/control-center]
-last-panel='bluetooth'
+last-panel='power'
 
 [org/gnome/desktop/a11y/magnifier]
 mag-factor=11.0
@@ -263,7 +278,7 @@ sleep-inactive-battery-type='suspend'
 command-history=['echo miles', 'xkill']
 disabled-extensions=['popx11gestures@system76.com', 'ding@rastersoft.com']
 enabled-extensions=['pop-cosmic@system76.com', 'pop-shell@system76.com', 'system76-power@system76.com', 'ubuntu-appindicators@ubuntu.com', 'cosmic-workspaces@system76.com', 'cosmic-dock@system76.com']
-favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.visualstudio.code.desktop', 'org.gnome.Terminal.desktop', 'com.google.Chrome.desktop', 'com.slack.Slack.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop']
+favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'com.slack.Slack.desktop', 'com.visualstudio.code.desktop', 'org.gnome.Terminal.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='42.5'
 
