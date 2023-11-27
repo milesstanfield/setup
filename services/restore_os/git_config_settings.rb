@@ -1,0 +1,24 @@
+module RestoreOS
+  class GitConfigSettings < ::RestoreOS::Base
+    def load!
+      echo_intent &&
+        load_settings!
+    end
+
+    private
+
+    def echo_intent
+      warn("restoring Git config settings ...")
+    end
+
+    def load_settings!
+      system(
+        <<~EOF.gsub(/\s+/, " ")
+          git config --global user.name "Miles Stanfield" && \
+            git config --global user.email "milesstanfield@gmail.com" && \
+            git config --global core.editor "vim"
+        EOF
+      )
+    end
+  end
+end

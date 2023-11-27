@@ -18,6 +18,7 @@ module RestoreOS
       # there could be settings and keybindings specific to an extension
       ::RestoreOS::VscodeSettings.new.load! &&
       ::RestoreOS::VscodeKeybindings.new.load! &&
+      ::RestoreOS::GitConfigSettings.new.load! &&
       ::RestoreOS::OnePasswordSettings.new.load!
   end
 end
