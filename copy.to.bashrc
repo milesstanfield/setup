@@ -6,9 +6,9 @@ if [ -d ~/code/setup/aliases ]; then
 fi
 
 # RUBY ----------------------------------------------------------------
+export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
 if cmdexists rbenv; then
-  export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
-  eval "$(rbenv init -)"               # load rbenv
+  eval "$(rbenv init -)" # load rbenv
 fi
 
 # Rust ----------------------------------------------------------------
