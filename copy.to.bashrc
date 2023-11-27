@@ -7,12 +7,12 @@ fi
 
 # RUBY ----------------------------------------------------------------
 export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
-if cmdexists rbenv; then
+if type "rbenv" &>/dev/null; then
   eval "$(rbenv init -)" # load rbenv
 fi
 
 # Rust ----------------------------------------------------------------
-if cmdexists rustc; then
+if type "rustc" &>/dev/null; then
   . "$HOME/.cargo/env" # https://rustup.rs/
 fi
 
@@ -25,8 +25,11 @@ export GITHUB_TOKEN=
 export AWS_VAULT_KEYCHAIN_NAME=login
 export AWS_DEFAULT_REGION=us-east-1
 
+# Docker
+export DOCKER_COMPOSE_PATH=/home/$USER/code/setup/docker/docker-compose.yml
+
 # VSCode
-if ! cmdexists code && fileexists "/var/lib/flatpak/exports/bin/com.visualstudio.code"; then
+if ! type "code" &>/dev/null && test -f "/var/lib/flatpak/exports/bin/com.visualstudio.code"; then
   warn "adding 'code' to /usr/bin/code ..."
   sudo ln -s /var/lib/flatpak/exports/bin/com.visualstudio.code /usr/bin/code
 fi

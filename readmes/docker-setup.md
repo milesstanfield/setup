@@ -43,7 +43,7 @@ sudo apt install libpq-dev
 ```
 sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
+newgrp docker # or restart your computer if you dont want to have to keep doing this
 ```
 
 # Create/Start containers
