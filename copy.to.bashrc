@@ -7,12 +7,12 @@ fi
 
 # RUBY ----------------------------------------------------------------
 export PATH="$HOME/.rbenv/bin:$PATH" # add `rbenv` cli to $PATH
-if type "rbenv" &>/dev/null; then
+if test -f "$HOME/.rbenv/bin/rbenv"; then
   eval "$(rbenv init -)" # load rbenv
 fi
 
 # Rust ----------------------------------------------------------------
-if type "rustc" &>/dev/null; then
+if test -f "$HOME/.cargo/bin/rustc"; then
   . "$HOME/.cargo/env" # https://rustup.rs/
 fi
 
