@@ -18,6 +18,7 @@ module RestoreOS
             dconf-editor: is a GUI for dconf (settings)
             flatpak: package manager
             auditd: provides auditctl tool for kernel audit logging
+            cheese: webcam management
         EOF
       )
     end
@@ -32,7 +33,8 @@ module RestoreOS
             ifuse \
             dconf-editor \
             flatpak \
-            auditd
+            auditd \
+            cheese
         EOF
       )
     end

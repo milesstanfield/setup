@@ -17,7 +17,6 @@ if type "rustc" &>/dev/null; then
 fi
 
 # GITHUB ------------------------------------------------------------
-# https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
 export GITHUB_USER=
 export GITHUB_TOKEN=
 
