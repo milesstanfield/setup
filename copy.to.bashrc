@@ -27,7 +27,7 @@ export AWS_DEFAULT_REGION=us-east-1
 export AWS_PROFILE=
 
 # Docker --------------------------------------------------------------
-export DOCKER_COMPOSE_PATH=/home/$USER/code/setup/docker/docker-compose.yml
+export DOCKER_COMPOSE_PATH=$HOME/code/setup/docker/docker-compose.yml
 
 # Homebrew ------------------------------------------------------------
 if test -f "/home/linuxbrew/.linuxbrew/bin/brew"; then

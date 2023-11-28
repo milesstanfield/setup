@@ -13,7 +13,7 @@ brew update && \
 ```
 # https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-debian.html
 
-install_path=/home/$USER/Downloads/session-manager-plugin.deb && \
+install_path=$HOME/Downloads/session-manager-plugin.deb && \
   curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "$install_path" && \
   sudo dpkg -i session-manager-plugin.deb
 ```

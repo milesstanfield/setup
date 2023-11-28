@@ -4,10 +4,10 @@
 
 Go [here](https://rustup.rs/) and do what it says to install `rustup`. This will give you the Cargo build tool (`cargo`) and the Rust compiler (`rustc`). You will also get `rustup`, a command line utility that you can use to install to different compiler versions.
 
-- Rustup metadata and toolchains will be installed into the Rustup home directory, located at: `/home/$USER/.rustup`
-- Cargo home dir is located at `/home/$USER/.cargo`
-- The cargo, rustc, rustup and other commands will be added to Cargo's bin directory, located at: `/home/$USER/.cargo/bin`
-- This path will then be added to your PATH environment variable by modifying the profile files located at: `/home/$USER/.bashrc`
+- Rustup metadata and toolchains will be installed into the Rustup home directory, located at: `$HOME/.rustup`
+- Cargo home dir is located at `$HOME/.cargo`
+- The cargo, rustc, rustup and other commands will be added to Cargo's bin directory, located at: `$HOME/.cargo/bin`
+- This path will then be added to your PATH environment variable by modifying the profile files located at: `$HOME/.bashrc`
 
 # Configure Rust
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 alias swallow="$1 &> /dev/null"
-alias playground="bash /home/$USER/code/setup/tmp/playground.sh"
+alias playground="bash $HOME/code/setup/tmp/playground.sh"
 alias setowner="sudo chown $1:$1 $2" # usage: setowner whoami /some-file-or-dir
 alias setexecutable="sudo chmod +x $1" # usage: setexecutable /usr/local/bin/miles
 alias symlink="echo -e 'usage:\nln -s /path/to/original /path/to/link'"
@@ -17,10 +17,8 @@ yes_or_no_func() {
   if varempty $user_alias; then # is not user alias
     $@ && echo "yes" || echo "no"
   else # is user alias
-    [[ $user_alias =~ \ *?alias\ .*=\'(.*)\' ]] && \
-      user_alias_func_name=$(echo "${BASH_REMATCH[1]}")
-    shift # remove first arg
-    # $user_alias_func_name="can_read_file_or_dir_func"
+    [[ $user_alias =~ \ *?alias\ .*=\'(.*)\' ]] && user_alias_func_name=$(echo "${BASH_REMATCH[1]}")
+    shift
     $user_alias_func_name $@ && echo "yes" || echo "no"
   fi
 }

@@ -1,4 +1,4 @@
-require "/home/#{%x(printf $USER)}/code/setup/services/color.rb"
+require "#{%x(printf $HOME)}/code/setup/services/color.rb"
 
 module RestoreOS
   class Base

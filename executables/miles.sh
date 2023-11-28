@@ -17,15 +17,15 @@ dock_options="--toggle"
 exit_code=0
 
 scroll_top_terminal_func() {
-  source /home/$USER/code/setup/scripts/terminal_scroll_top.sh
+  source $HOME/code/setup/scripts/terminal_scroll_top.sh
 }
 
 clear_terminal_func() {
-  source /home/$USER/code/setup/scripts/terminal_clear.sh
+  source $HOME/code/setup/scripts/terminal_clear.sh
 }
 
 toggle_dock_func() {
-  source /home/$USER/code/setup/scripts/dock_toggle.sh
+  source $HOME/code/setup/scripts/dock_toggle.sh
 }
 
 error_func() {

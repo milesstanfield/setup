@@ -13,7 +13,7 @@ which make # should output a path
 
 # download and install homebrew package
 ```
-install_path=/home/$USER/Downloads/homebrew_install.sh && \
+install_path=$HOME/Downloads/homebrew_install.sh && \
   curl -fsSL -o "$install_path" "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh" && \
   /bin/bash "$install_path" &&
   echo -e "\033[1;93mTAKE NOTE OF THAT OUTPUT ^^^\033[0m"
