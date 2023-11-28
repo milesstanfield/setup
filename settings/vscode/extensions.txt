@@ -3,5 +3,6 @@ bung87.vscode-gemfile
 foxundermoon.shell-format
 rust-lang.rust-analyzer
 sianglim.slim
+tamasfe.even-better-toml
 vayan.haml
 waderyan.gitblame

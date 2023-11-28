@@ -38,8 +38,16 @@ target-units='radian'
 window-position=(4388, 223)
 word-size=64
 
+[org/gnome/cheese]
+burst-delay=1000
+camera='Full HD webcam (V4L2)'
+photo-x-resolution=1920
+photo-y-resolution=1080
+video-x-resolution=1920
+video-y-resolution=1080
+
 [org/gnome/control-center]
-last-panel='firmware'
+last-panel='bluetooth'
 
 [org/gnome/desktop/a11y/magnifier]
 mag-factor=11.0
