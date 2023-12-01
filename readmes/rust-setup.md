@@ -28,6 +28,11 @@ On linux you probalby already have `build-essential` installed, but its good to 
 sudo apt update && sudo apt install build-essential
 ```
 
+# Install Cargo Watch (for hotreloading tests)
+```
+# https://github.com/watchexec/cargo-watch
+cargo install cargo-watch
+```
 
 # Updating Rust
 ```
