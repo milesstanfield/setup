@@ -19,6 +19,7 @@ module RestoreOS
             flatpak: package manager
             auditd: provides auditctl tool for kernel audit logging
             cheese: webcam management
+            lynx: a general purpose distributed information browser for the World Wide Web
         EOF
       )
     end
@@ -34,7 +35,8 @@ module RestoreOS
             dconf-editor \
             flatpak \
             auditd \
-            cheese
+            cheese \
+            lynx
         EOF
       )
     end
