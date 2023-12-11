@@ -6,3 +6,4 @@ sianglim.slim
 tamasfe.even-better-toml
 vayan.haml
 waderyan.gitblame
+zxh404.vscode-proto3
