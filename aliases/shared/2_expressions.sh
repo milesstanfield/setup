@@ -15,7 +15,7 @@ path_readable_func() {
 }
 
 variable_is_empty_func() {
-  test -z "$1" # quote here was absolutely necessary .. but why? for doc help $@ where multiple args given
+  test -z "$1" # quote here was absolutely necessary .. but why?
 }
 
 file_is_present_func() {
@@ -31,31 +31,34 @@ file_is_empty_func() {
 }
 
 command_exists_func() {
-  if ! type "$1" &> /dev/null; then
+  if
+    ! type "$1" &
+    >/dev/null
+  then
     return 1
   fi
 }
 
 # paths (file or directory)
-alias pathexists="test -e $1" # True if file or directory exists.
-alias pathsymlinkexists="test -L $1" # True if path exists and is a symbolic link
+alias pathexists="test -e $1"         # True if file or directory exists.
+alias pathsymlinkexists="test -L $1"  # True if path exists and is a symbolic link
 alias pathreadable=path_readable_func # True if file or directory exists and is readable.
 alias pathwritable=path_writable_func # True if file or directory exists and is writable.
-alias pathmodified="test -N $1" # True if file exists and has been modified since it was last read.
+alias pathmodified="test -N $1"       # True if file exists and has been modified since it was last read.
 
 # directories
 alias direxists="test -d $1" # True if path exists and is a directory
 
 # files
-alias fileexists=file_exists_func # True if path exists and is a file.
+alias fileexists=file_exists_func             # True if path exists and is a file.
 alias filereadable="test -f $1 && test -r $1" # True if path exists, is a file, and is readable.
-alias filepresent=file_is_present_func # True if path exists, is a file, and has content
-alias fileempty=file_is_empty_func # True if path is an existing file but has no content
-alias fileexecutable=file_executable_func # True if path exists, is a file, and is executable.
+alias filepresent=file_is_present_func        # True if path exists, is a file, and has content
+alias fileempty=file_is_empty_func            # True if path is an existing file but has no content
+alias fileexecutable=file_executable_func     # True if path exists, is a file, and is executable.
 
 # variables
-alias vardefined="test -v $1" # True if the variable NAME is set with any value (ex: varnameset FOO)
-alias varempty=variable_is_empty_func # True if variable isn't set OR it is but its value is empty
+alias vardefined="test -v $1"                  # True if the variable NAME is set with any value (ex: varnameset FOO)
+alias varempty=variable_is_empty_func          # True if variable isn't set OR it is but its value is empty
 alias varpresent="! variable_is_empty_func $1" # True if variable is set and its value is not empty
 
 # commands
