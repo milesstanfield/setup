@@ -5,6 +5,7 @@ alias playground="bash $HOME/code/setup/tmp/playground.sh"
 alias setowner="sudo chown $1:$1 $2" # usage: setowner whoami /some-file-or-dir
 alias setexecutable="sudo chmod +x $1" # usage: setexecutable /usr/local/bin/miles
 alias symlink="echo -e 'usage:\nln -s /path/to/original /path/to/link'"
+alias glibcversion="ldd --version"
 
 # notes:
 # "$@" is equivalent to "$1" "$2"
