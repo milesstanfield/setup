@@ -16,7 +16,8 @@ module RestoreOS
         <<~EOF.gsub(/\s+/, " ")
           git config --global user.name "Miles Stanfield" && \
             git config --global user.email "milesstanfield@gmail.com" && \
-            git config --global core.editor "vim"
+            git config --global core.editor "vim" && \
+            git config --global merge.tool meld
         EOF
       )
     end

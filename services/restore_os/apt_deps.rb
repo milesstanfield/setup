@@ -20,6 +20,7 @@ module RestoreOS
             auditd: provides auditctl tool for kernel audit logging
             cheese: webcam management
             lynx: a general purpose distributed information browser for the World Wide Web
+            meld: graphical tool to diff and merge files
         EOF
       )
     end
@@ -36,7 +37,8 @@ module RestoreOS
             flatpak \
             auditd \
             cheese \
-            lynx
+            lynx \
+            meld
         EOF
       )
     end
