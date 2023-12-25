@@ -46,10 +46,18 @@ new_branch_func() {
 }
 alias new=new_branch_func
 
+checkout_main_or_master_func() {
+  if [[ $(pwd) == *"/callrail/callrail"* ]]; then
+    git checkout master
+  else
+    git checkout main
+  fi
+}
+alias m=checkout_main_or_master_func
+
 alias diff="git diff"
 alias s="git status"
 alias b="git branch"
-alias m="git checkout main"
 alias clean="git checkout . ; git clean -d -f"
 alias aac="git add . && git commit -m 'automated commit message'"
 alias stash="git stash save -u"
