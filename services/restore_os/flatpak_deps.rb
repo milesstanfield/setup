@@ -23,6 +23,7 @@ module RestoreOS
             signal: secure messaging app
             pithos: lightweight client for pandora streaming music service
             Main Menu: customize the menu
+            Brave: The web browser from Brave
         EOF
       )
     end
@@ -40,7 +41,8 @@ module RestoreOS
             org.gimp.GIMP \
             org.signal.Signal \
             io.github.Pithos \
-            page.codeberg.libre_menu_editor.LibreMenuEditor
+            page.codeberg.libre_menu_editor.LibreMenuEditor \
+            com.brave.Browser
         EOF
       )
     end
