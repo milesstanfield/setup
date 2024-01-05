@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 rebase_func() {
   git rebase -i HEAD~$1
@@ -13,7 +13,7 @@ alias l=log_func
 backup_branch_func() {
   current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   b="-backup"
-  git checkout -b "$current_branch$b"
+  git checkout -b "${current_branch}${b}"
   git checkout $current_branch
 }
 alias backup=backup_branch_func
@@ -54,6 +54,40 @@ checkout_main_or_master_func() {
   fi
 }
 alias m=checkout_main_or_master_func
+
+checkin_func() {
+  red='\033[0;31m'
+  nocolor='\033[0m'
+  branches=()
+  index=0
+  for full_branch in $(git for-each-ref --format='%(refname)' refs/heads/); do
+    branch_name=${full_branch#"refs/heads/"}
+    branches+=("$branch_name")
+    echo $((index++)). "$branch_name"
+  done
+
+  if [[ "$1" = *"del"* ]]; then
+    echo -e "${red}delete branch number: ${nocolor}"
+  else
+    echo "checkout branch number: "
+  fi
+
+  read input_number
+  branch=${branches[$input_number]}
+
+  re='^[0-9]+$'
+  if ! [[ $input_number =~ $re ]]; then
+    echo -e "${red}${input_number} is not a number${nocolor}"
+  elif [[ "$branch" == "" ]]; then
+    echo -e "${red}${input_number} is not a valid branch index${nocolor}"
+  elif [[ "$1" = *"del"* ]]; then
+    git branch -D $branch
+  else
+    git checkout $branch
+  fi
+}
+alias c=checkin_func
+alias del="checkin_func 'del'"
 
 alias diff="git diff"
 alias s="git status"
