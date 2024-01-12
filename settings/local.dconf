@@ -67,6 +67,9 @@ apps=['com.github.donadigo.eddy.desktop', 'com.system76.Popsicle.desktop', 'guch
 name='Utilities'
 translate=true
 
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
 [org/gnome/desktop/input-sources]
 current=uint32 0
 per-window=false
@@ -312,12 +315,12 @@ sleep-inactive-battery-type='suspend'
 command-history=['echo miles', 'xkill']
 disabled-extensions=['popx11gestures@system76.com', 'ding@rastersoft.com']
 enabled-extensions=['pop-cosmic@system76.com', 'pop-shell@system76.com', 'system76-power@system76.com', 'ubuntu-appindicators@ubuntu.com', 'cosmic-workspaces@system76.com', 'cosmic-dock@system76.com']
-favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'com.slack.Slack.desktop', 'com.visualstudio.code.desktop', 'org.gnome.Terminal.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop']
+favorite-apps=['pop-cosmic-applications.desktop', 'org.gnome.Nautilus.desktop', 'com.brave.Browser.desktop', 'com.slack.Slack.desktop', 'com.visualstudio.code.desktop', 'org.gnome.Terminal.desktop', 'com.discordapp.Discord.desktop', 'org.signal.Signal.desktop', 'io.github.Pithos.desktop', 'com.cisco.anyconnect.gui.desktop']
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='42.5'
 
 [org/gnome/shell/extensions/dash-to-dock]
-click-action='minimize-or-previews'
+click-action='cycle-windows'
 dash-max-icon-size=48
 dock-fixed=true
 extend-height=false
@@ -468,3 +471,6 @@ sort-order='descending'
 type-format='category'
 window-position=(1168, 265)
 window-size=(1104, 822)
+
+[system/proxy]
+mode='none'
