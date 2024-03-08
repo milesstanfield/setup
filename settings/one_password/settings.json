@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sshAgent.sshAuthorizatonModel": "application",
-  "ui.routes.lastUsedRoute": "{\"type\":\"ItemDetail\",\"content\":{\"itemListRoute\":{\"unlockedRoute\":{\"collectionUuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"},\"itemListType\":{\"type\":\"Vault\",\"content\":\"6\"},\"category\":null,\"sortBehavior\":null},\"itemId\":\"FA\"}}",
+  "ui.routes.lastUsedRoute": "{\"type\":\"ItemDetail\",\"content\":{\"itemListRoute\":{\"unlockedRoute\":{\"collectionUuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"},\"itemListType\":{\"type\":\"Vault\",\"content\":\"6\"},\"category\":null,\"sortBehavior\":null},\"itemId\":\"11C\"}}",
   "security.authenticatedUnlock.enabled": false,
   "app.theme": "dark",
   "keybinds.quickAccess": "",
@@ -10,6 +10,8 @@
   "app.defaultVaultForSaving": "{\"VaultReference\":{\"vault_uuid\":\"pcl7iowtmxlw4piy5b5vvr6hxi\",\"account_uuid\":\"V2D6K3UCM5HI3KGRGKZG6GVEGE\"}}",
   "keybinds.open": "CommandOrControl+[1]1",
   "sshAgent.promotionToastDismissed": true,
+  "passwordGenerator.includeSymbols": true,
+  "passwordGenerator.size.characters": 23,
   "authTags": {
     "app.defaultVaultForSaving": "H5z+EcNodb00HfY1wpxJknE64gnWQSR5YoJlxENVb0U",
     "app.theme": "0rlNRz/m048jWdm1DqLdgbIgjszFAhRScrIhlijxcKo",
@@ -17,9 +19,11 @@
     "keybinds.lock": "1ebqQwJsP+/Ku4uw9K5wDaez594znz/pEji+VdB0fpE",
     "keybinds.open": "wMwGoOJ4aZ2w28s3ythLOAtMldOJzg1DQOYBoiIS6yI",
     "keybinds.quickAccess": "9cBHjx7Gdww6UnsicrDUczGuxz18BFxCYbrzQR0zXyY",
+    "passwordGenerator.includeSymbols": "f8fpbbmtHzOfp5beFlTZZDDSu1h+Ossv0ulb3+4L6OI",
+    "passwordGenerator.size.characters": "S4O1d+6usAnHRDF1hOJ6WHuVVqYF8MtghnLFHivXFqU",
     "security.authenticatedUnlock.enabled": "pS5ZToyxHQuLUXo4LAo94nIJy3OxNCcbG7Cp+Qag5Q8",
     "sshAgent.promotionToastDismissed": "jotRhUBrqAfgcPBmM9GWau6bBUexp/aHX32fccv2jxY",
     "sshAgent.sshAuthorizatonModel": "A5X4aXZLdeSRy3vt0cCN+JshYQLjBBIiS7M0Si250vM",
-    "ui.routes.lastUsedRoute": "5G5lgkxarqS0tM7UoJHj1A/Qup47BIK0t1yAn2FOJdo"
+    "ui.routes.lastUsedRoute": "A74m+W1ly2bzNmLGq0ZY8krjxv8D2VPIA0FKFfgVzts"
   }
 }

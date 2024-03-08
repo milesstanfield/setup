@@ -34,5 +34,6 @@
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true,
   "rust-analyzer.hover.actions.implementations.enable": false,
-  "rust-analyzer.lens.implementations.enable": false
+  "rust-analyzer.lens.implementations.enable": false,
+  "github.copilot.editor.enableAutoCompletions": false
 }
