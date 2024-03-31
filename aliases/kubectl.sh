@@ -86,6 +86,7 @@ prodpoddelete_func() {
 alias prodpoddelete='prodpoddelete_func'
 
 poduninstall_func() {
+  warn "poduninstall staging messenger-staging"
   ave cr-stage-admin helm -n "$1" uninstall "$2"
 }
 alias poduninstall='poduninstall_func'
