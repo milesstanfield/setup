@@ -16,21 +16,25 @@ prodpods_func() {
 alias prodpods='prodpods_func'
 
 poddescribe_func() {
+  warn "example: poddescribe staging messenger-staging"
   ave cr-stage-dev kubectl -n "$1" describe pod "$2"
 }
 alias poddescribe='poddescribe_func'
 
 prodpoddescribe_func() {
+  warn "example: prodpoddescribe prod dash-prod"
   ave cr-prod-lead kubectl -n "$1" describe pod "$2"
 }
 alias prodpoddescribe='prodpoddescribe_func'
 
 podlog_func() {
+  warn "example: podlog staging messenger-staging-messenger-web-5f86b785b4-x979b"
   ave cr-stage-dev kubectl -n "$1" logs "$2"
 }
 alias podlog='podlog_func'
 
 prodpodlog_func() {
+  warn "example: prodpodlog prod messenger-prod-messenger-web-5f86b785b4-x979b"
   ave cr-prod-lead kubectl -n "$1" logs "$2"
 }
 alias prodpodlog='prodpodlog_func'
@@ -46,21 +50,27 @@ prodreleases_func() {
 alias prodreleases='prodreleases_func'
 
 poddeploys_func() {
+  warn "example: poddeploys staging dash-nonprod"
+  warn "example: poddeploys staging mercury-staging"
   ave cr-stage-admin helm -n "$1" history "$2"
 }
 alias poddeploys='poddeploys_func'
 
 prodpoddeploys_func() {
+  warn "example: prodpoddeploys prod dash-prod"
   ave cr-prod-lead helm -n "$1" history "$2"
 }
 alias prodpoddeploys='prodpoddeploys_func'
 
 podrollback_func() {
+  warn "example: podrollback staging dash-nonprod 12"
+  warn "example: podrollback staging mercury-staging 12"
   ave cr-stage-admin helm rollback "$2" "$3" -n "$1"
 }
 alias podrollback='podrollback_func'
 
 prodpodrollback_func() {
+  warn "example: prodpodrollback prod dash-prod 12"
   ave cr-prod-lead helm rollback "$2" "$3" -n "$1"
 }
 alias prodpodrollback='prodpodrollback_func'
