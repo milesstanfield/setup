@@ -2,21 +2,86 @@
 
 alias goprod="kubectl config use-context prod"
 alias godev="kubectl config use-context non-prod"
-alias pods='_pods() { ave cr-stage-dev kubectl -n "$1" get pods }; _pods'
-alias prodpods='_prodpods() { ave cr-prod-lead kubectl -n "$1" get pods }; _prodpods'
-alias poddescribe='_poddescribe() { ave cr-stage-dev kubectl -n "$1" describe pod "$2" }; _poddescribe'
-alias prodpoddescribe='_prodpoddescribe() { ave cr-prod-lead kubectl -n "$1" describe pod "$2" }; _prodpoddescribe'
-alias podlog='_podlog() { ave cr-stage-dev kubectl -n "$1" logs "$2" }; _podlog'
-alias prodpodlog='_prodpodlog() { ave cr-prod-lead kubectl -n "$1" logs "$2" }; _prodpodlog'
 alias namespaces="ave cr-stage-dev kubectl get namespace"
 alias prodnamespaces="ave cr-prod-lead kubectl get namespace"
-alias releases='_releases1() { ave cr-stage-admin helm list -n "$1" }; _releases1'
-alias prodreleases='_prodreleases() { ave cr-prod-lead helm list -n "$1" }; _prodreleases'
-alias poddeploys='_poddeploys() { ave cr-stage-admin helm -n "$1" history "$2" }; _poddeploys'
-alias prodpoddeploys='_prodpoddeploys() { ave cr-prod-lead helm -n "$1" history "$2" }; _prodpoddeploys'
-alias podrollback='_podrollback() { ave cr-stage-admin helm rollback "$2" "$3" -n "$1" }; _podrollback'
-alias prodpodrollback='_prodpodrollback() { ave cr-prod-lead helm rollback "$2" "$3" -n "$1" }; _prodpodrollback'
-alias poddelete='_poddelete() { ave cr-stage-dev kubectl delete pods "$2" -n "$1" }; _poddelete'
-alias prodpoddelete='_prodpoddelete() { ave cr-prod-lead kubectl delete pods "$2" -n "$1" }; _prodpoddelete'
-alias poduninstall='_poduninstall3() { ave cr-stage-admin helm -n "$1" uninstall "$2" }; _poduninstall3'
-alias podinstall='echo "ave cr-stage-admin helm ssm install <service>-nonprod callrail/<service> -n <namespace> -f config/helm/staging.yaml"'
+
+pods_func() {
+  ave cr-stage-dev kubectl -n "$1" get pods
+}
+alias pods='pods_func'
+
+prodpods_func() {
+  ave cr-prod-lead kubectl -n "$1" get pods
+}
+alias prodpods='prodpods_func'
+
+poddescribe_func() {
+  ave cr-stage-dev kubectl -n "$1" describe pod "$2"
+}
+alias poddescribe='poddescribe_func'
+
+prodpoddescribe_func() {
+  ave cr-prod-lead kubectl -n "$1" describe pod "$2"
+}
+alias prodpoddescribe='prodpoddescribe_func'
+
+podlog_func() {
+  ave cr-stage-dev kubectl -n "$1" logs "$2"
+}
+alias podlog='podlog_func'
+
+prodpodlog_func() {
+  ave cr-prod-lead kubectl -n "$1" logs "$2"
+}
+alias prodpodlog='prodpodlog_func'
+
+releases_func() {
+  ave cr-stage-admin helm list -n "$1"
+}
+alias releases='releases_func'
+
+prodreleases_func() {
+  ave cr-prod-lead helm list -n "$1"
+}
+alias prodreleases='prodreleases_func'
+
+poddeploys_func() {
+  ave cr-stage-admin helm -n "$1" history "$2"
+}
+alias poddeploys='poddeploys_func'
+
+prodpoddeploys_func() {
+  ave cr-prod-lead helm -n "$1" history "$2"
+}
+alias prodpoddeploys='prodpoddeploys_func'
+
+podrollback_func() {
+  ave cr-stage-admin helm rollback "$2" "$3" -n "$1"
+}
+alias podrollback='podrollback_func'
+
+prodpodrollback_func() {
+  ave cr-prod-lead helm rollback "$2" "$3" -n "$1"
+}
+alias prodpodrollback='prodpodrollback_func'
+
+poddelete_func() {
+  ave cr-stage-dev kubectl delete pods "$2" -n "$1"
+}
+alias poddelete='poddelete_func'
+
+prodpoddelete_func() {
+  ave cr-prod-lead kubectl delete pods "$2" -n "$1"
+}
+alias prodpoddelete='prodpoddelete_func'
+
+poduninstall_func() {
+  ave cr-stage-admin helm -n "$1" uninstall "$2"
+}
+alias poduninstall='poduninstall_func'
+
+podinstall_func() {
+  warn "example: podinstall messenger 0.1.0 config/helm/non-prod/staging.yaml"
+  ave cr-stage-admin helm ssm install $1-staging callrail/$1 -n staging --version $2 -f $3
+}
+alias podinstall='podinstall_func'
