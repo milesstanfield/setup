@@ -92,7 +92,8 @@ poduninstall_func() {
 alias poduninstall='poduninstall_func'
 
 podinstall_func() {
-  warn "example: podinstall messenger 0.1.0 config/helm/non-prod/staging.yaml"
-  ave cr-stage-admin helm ssm install $1-staging callrail/$1 -n staging --version $2 -f $3
+  warn "example: podinstall staging messenger 0.1.0 config/helm/non-prod/staging.yaml"
+  warn "example: podinstall pre-prod messenger 0.1.0 config/helm/non-prod/staging.yaml"
+  ave cr-stage-admin helm ssm install $2-$1 callrail/$2 -n $1 --version $3 -f $4
 }
 alias podinstall='podinstall_func'
