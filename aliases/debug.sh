@@ -7,6 +7,7 @@ alias setexecutable="sudo chmod +x $1" # usage: setexecutable /usr/local/bin/mil
 alias symlink="echo -e 'usage:\nln -s /path/to/original /path/to/link'"
 alias glibcversion="ldd --version"
 alias opengem="EDITOR=code bundle open $1"
+alias stacktrace="strace gedit 2>&1 | grep can"
 
 # notes:
 # "$@" is equivalent to "$1" "$2"
