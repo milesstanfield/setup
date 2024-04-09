@@ -76,11 +76,13 @@ prodpodrollback_func() {
 alias prodpodrollback='prodpodrollback_func'
 
 poddelete_func() {
+  warn "example: poddelete staging messenger-staging-messenger-web-5f86b785b4-x979b"
   ave cr-stage-dev kubectl delete pods "$2" -n "$1"
 }
 alias poddelete='poddelete_func'
 
 prodpoddelete_func() {
+  warn "example: prodpoddelete prod messenger-prod-messenger-web-5f86b785b4-x979b"
   ave cr-prod-lead kubectl delete pods "$2" -n "$1"
 }
 alias prodpoddelete='prodpoddelete_func'
