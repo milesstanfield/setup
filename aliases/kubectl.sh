@@ -5,6 +5,16 @@ alias godev="kubectl config use-context non-prod"
 alias namespaces="ave cr-stage-dev kubectl get namespace"
 alias prodnamespaces="ave cr-prod-lead kubectl get namespace"
 
+jobs_func() {
+  ave cr-stage-dev kubectl -n "$1" get cronjob
+}
+alias jobs='jobs_func'
+
+prodjobs_func() {
+  ave cr-prod-lead kubectl -n "$1" get cronjob
+}
+alias prodjobs='prodjobs_func'
+
 pods_func() {
   ave cr-stage-dev kubectl -n "$1" get pods
 }
