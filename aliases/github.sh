@@ -47,9 +47,7 @@ new_branch_func() {
 alias new=new_branch_func
 
 checkout_main_or_master_func() {
-  if [[ $(pwd) == *"/callrail/callrail"* ]]; then
-    git checkout master
-  elif [[ $(pwd) == *"/callrail/mercury"* ]]; then
+  if grep -q master ".git/config"; then
     git checkout master
   else
     git checkout main
