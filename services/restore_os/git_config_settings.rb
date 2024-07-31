@@ -17,7 +17,7 @@ module RestoreOS
           git config --global user.name "Miles Stanfield" && \
             git config --global user.email "milesstanfield@gmail.com" && \
             git config --global core.editor "vim" && \
-            git config --global merge.tool meld
+            git config --global merge.tool kdiff3
         EOF
       )
     end
