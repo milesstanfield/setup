@@ -9,8 +9,6 @@ squash_func() {
   last_commit_msg=$(git log -1 --pretty=%s --skip=$(($1 - 1)))
   reset_to_sha=$(git log -1 --format=format:%H --skip=$1) # sha before the one specified
 
-  echo "reset to sha=${reset_to_sha}"
-
   git reset --hard "${reset_to_sha}"
   git merge --squash "${squash_branch}"
   git commit -m "${last_commit_msg}"
