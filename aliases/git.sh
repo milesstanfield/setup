@@ -1,5 +1,13 @@
 #!/bin/bash
 
+main_or_master_func() {
+  if grep -q master ".git/config"; then
+    echo "master"
+  else
+    echo "main"
+  fi
+}
+
 rebase_func() {
   git rebase -i HEAD~$1
 }
@@ -47,7 +55,7 @@ new_branch_func() {
 alias new=new_branch_func
 
 checkout_main_or_master_func() {
-  if grep -q master ".git/config"; then
+  if [[ "$(main_or_master_func)" = "master" ]]; then
     git checkout master
   else
     git checkout main
