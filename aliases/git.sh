@@ -1,12 +1,22 @@
 #!/bin/bash
 
-main_or_master_func() {
-  if grep -q master ".git/config"; then
-    echo "master"
-  else
-    echo "main"
-  fi
+squash_func() {
+  current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+  squash_branch="${current_branch}-squashme"
+  git checkout -b "${squash_branch}"
+  git checkout "${current_branch}"
+
+  last_commit_msg=$(git log -1 --pretty=%s --skip=$(($1 - 1)))
+  reset_to_sha=$(git log -1 --format=format:%H --skip=$1) # sha before the one specified
+
+  echo "reset to sha=${reset_to_sha}"
+
+  git reset --hard "${reset_to_sha}"
+  git merge --squash "${squash_branch}"
+  git commit -m "${last_commit_msg}"
+  git branch -D "${squash_branch}"
 }
+alias squash=squash_func
 
 rebase_func() {
   git rebase -i HEAD~$1
@@ -14,7 +24,7 @@ rebase_func() {
 alias rebase=rebase_func
 
 log_func() {
-  git log -$1 --pretty=oneline --abbrev-commit
+  git log -$1 --oneline
 }
 alias l=log_func
 
@@ -55,7 +65,7 @@ new_branch_func() {
 alias new=new_branch_func
 
 checkout_main_or_master_func() {
-  if [[ "$(main_or_master_func)" = "master" ]]; then
+  if grep -q master ".git/config"; then
     git checkout master
   else
     git checkout main
