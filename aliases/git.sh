@@ -1,18 +1,22 @@
 #!/bin/bash
 
 squash_func() {
-  current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
-  squash_branch="${current_branch}-squashme"
-  git checkout -b "${squash_branch}"
-  git checkout "${current_branch}"
+  if [ -z "$1" ]; then
+    warn "must provide a number arg"
+  else
+    current_branch="$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+    squash_branch="${current_branch}-squashme"
+    git checkout -b "${squash_branch}"
+    git checkout "${current_branch}"
 
-  last_commit_msg=$(git log -1 --pretty=%s --skip=$(($1 - 1)))
-  reset_to_sha=$(git log -1 --format=format:%H --skip=$1) # sha before the one specified
+    last_commit_msg=$(git log -1 --pretty=%s --skip=$(($1 - 1)))
+    reset_to_sha=$(git log -1 --format=format:%H --skip=$1) # sha before the one specified
 
-  git reset --hard "${reset_to_sha}"
-  git merge --squash "${squash_branch}"
-  git commit -m "${last_commit_msg}"
-  git branch -D "${squash_branch}"
+    git reset --hard "${reset_to_sha}"
+    git merge --squash "${squash_branch}"
+    git commit -m "${last_commit_msg}"
+    git branch -D "${squash_branch}"
+  fi
 }
 alias squash=squash_func
 
